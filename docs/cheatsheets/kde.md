@@ -8,7 +8,7 @@ weight: -10
 intro: KDE
 ---
 
-{: .-three-column}
+
 
 ### KDEの残骸を消す
 

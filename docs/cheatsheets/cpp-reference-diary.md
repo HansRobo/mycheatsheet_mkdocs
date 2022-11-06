@@ -8,7 +8,7 @@ weight: -10
 intro: cppreference.com日記
 ---
 
-{: .-three-column}
+
 
 ### [関数Tryブロック](https://ja.cppreference.com/w/cpp/language/function-try-block)
 
@@ -20,7 +20,6 @@ int main() try {}
 catch (...){}
 ```
 
-
 ### [main関数](https://ja.cppreference.com/w/cpp/language/main_function)
 
 いわゆるエントリポイント，`main`関数
@@ -29,7 +28,6 @@ catch (...){}
 - `auto main()`という書き方はダメらしい
 - `return N`は`std::exit(N)`と同じ意味を持つ
 - `main`関数が関数`try`ブロックになっていてもmain関数の外で定義された（しかし，`main`関数の終了と同時に破棄される）静的オブジェクトのデストラクタで投げられた例外はキャッチできない
-
 
 ### [std::min_element](https://ja.cppreference.com/w/cpp/algorithm/min_element), [std::max_element](https://ja.cppreference.com/w/cpp/algorithm/max_element)
 
@@ -45,7 +43,6 @@ catch (...){}
 
 stlにはたくさんのアルゴリズム関数が存在するが，それらの第一引数にアルゴリズムの処理を実行する上での制約を「実行ポリシー」として与えることができるらしい．
 「実行ポリシー」は以下のような種類が存在する
-
 
 | 実行ポリシー        | 説明                |
 |---------------|-------------------|
@@ -107,11 +104,11 @@ A(){
 | `wait_until(<time_point>)` | 処理完了まで待つ（指定時間になったらタイムアウト）          |
 {: .-shortcuts}
 
-
 ### [std::promise](https://cpprefjp.github.io/reference/future/promise.html)
 
 `std::future`に出来上がったデータを受け渡す役割を持ったクラス  
 使い方は以下のような感じ
+
 ```cpp
 std::promise<int> p;
 std::future<int> f = p.get_future();
@@ -128,6 +125,7 @@ std::cout << f.get() << std::endl;
 
 C++11からの機能．複数のコンストラクタ内で共通の処理を初期化処理で行える．  
 （コンストラクタの本体にメンバ関数を呼び出す方法もあるが，メンバ関数は初期化が完了した後にしか呼び出せない共通処理なので，ベタ書きしたり委譲コンストラクタを使う場合に比べてパフォーマンスで劣る）
+
 ```cpp
 class X {
 public:
@@ -193,12 +191,12 @@ namespace api {
 }
 ```
 
-
 ### [入れ子名前空間の定義(C++17)](https://cpprefjp.github.io/lang/cpp17/nested_namespace.html)
 
 入れ子上になった名前空間を一度に定義することが可能になる
 
 C++14まで
+
 ```cpp
 namespace aa{
   namespace bb{
@@ -208,6 +206,7 @@ namespace aa{
 ```
 
 C++17から
+
 ```cpp
 namespace aa::bb{
   void f(){}
@@ -219,6 +218,7 @@ namespace aa::bb{
 C++11からのインライン名前空間とC++17からの入れ子名前空間の併用は出来なかったが，C++20から出来るようになった
 
 C++17
+
 ```cpp
 namespace aa{
   inline namespace bb{
@@ -226,7 +226,9 @@ namespace aa{
   }
 }
 ```
+
 C++20
+
 ```cpp
 namespace aa::inline bb{
   void f(){}
@@ -236,6 +238,7 @@ namespace aa::inline bb{
 ### [範囲for文(C++11)](https://cpprefjp.github.io/lang/cpp11/range_based_for.html)
 
 for文を簡潔に書くことが出来る機能．
+
 ```cpp
 for ( auto element : elements ) std::cout << element << std::endl;
 ```
@@ -249,13 +252,14 @@ for (auto __begin = __range.begin(), __end = __range.end(); __begin != __end; ++
   std::cout << element << std::endl;
 }
 ```
+
 ↑から分かるように，`begin()`,`end()`,`operator++()`, `operator*()`, `operator!=()`が適切に定義されていれば自作クラスでも使える．
 
 注意点
+
 - 要素をeraseしてはいけない(バグる)
 - インデックスの取得とは相性が悪い（出来ないこともない：[別ページ](https://hansrobo.github.io/mycheatsheets/range-based-for#:~:text=%E7%AF%84%E5%9B%B2for%E6%96%87(range%2Dbased%20for)%E3%81%A7%E3%82%A4%E3%83%B3%E3%83%87%E3%83%83%E3%82%AF%E3%82%B9%E3%82%92%E4%BD%BF%E3%81%84%E3%81%9F%E3%81%84)参照）
 - 範囲として渡した配列などが，範囲for文実行中に寿命が切れないように注意
-
 
 ### [範囲forループの制限緩和(C++17)](https://cpprefjp.github.io/lang/cpp17/generalizing_the_range-based_for_loop.html)
 
@@ -268,6 +272,7 @@ for (auto __begin = __range.begin(), __end = __range.end(); __begin != __end; ++
 範囲for文を展開する時に`begin()`と`end()`を探すルールが変更された．（C++11まで遡って変更されていて，[gcc8,clang8以降で適用されている](https://cpprefjp.github.io/implementation-status.html#:~:text=%E3%81%97%E3%81%AB%E3%81%84%E3%81%8F-,8,8,-2019%20Update%205)）  
 
 適用前イメージ
+
 ```cpp
 if ( beginメンバ関数が存在 OR endメンバ関数が存在 ){
   beginメンバ関数を使用
@@ -277,6 +282,7 @@ if ( beginメンバ関数が存在 OR endメンバ関数が存在 ){
 ```
 
 適用後イメージ
+
 ```cpp
 if ( beginメンバ関数が存在 AND endメンバ関数が存在 ){
   begin/endメンバ関数を使用
@@ -294,7 +300,6 @@ if ( beginメンバ関数が存在 AND endメンバ関数が存在 ){
 - 適用後のルールでは，`begin`の存在も確認を行うため，`std::ios_base::end`は範囲forの展開に使われない
 - 適用後のルールでは結局非メンバの`begin`と`end`が使われて問題なくコンパイルできる
 
-
 ### [属性構文(C++11)](https://cpprefjp.github.io/lang/cpp11/attributes.html)
 
 ソースコードに関する追加の情報をコンパイラに伝えるための構文  
@@ -302,6 +307,7 @@ if ( beginメンバ関数が存在 AND endメンバ関数が存在 ){
 型などとは違い，ユーザが属性を定義することは出来ない．  
 
 現在存在するのは以下
+
 - [noreturn(C++11)](https://cpprefjp.github.io/lang/cpp11/attributes.html#noreturn)
 - [carries_dependency(C++11)](https://cpprefjp.github.io/lang/cpp11/attributes.html#carries_dependency)
 - [deprecated(C++14)](https://cpprefjp.github.io/lang/cpp14/deprecated_attr.html)
@@ -321,6 +327,7 @@ if ( beginメンバ関数が存在 AND endメンバ関数が存在 ){
   throw std::runtime_error("error");
 }
 ```
+
 関数が決して返らない（=必ず例外が投げられる？）ことをコンパイラに伝える  
 この属性がついた関数が返る場合の動作は未定義
 
@@ -328,17 +335,21 @@ if ( beginメンバ関数が存在 AND endメンバ関数が存在 ){
 
 TBD  
 
-TODO: 
+TODO:
+
 - [std::atomic](https://cpprefjp.github.io/reference/atomic/atomic.html)
 - [std::memory_order](https://cpprefjp.github.io/reference/atomic/memory_order.html)
 
 ### [deprecated属性(C++14)](https://cpprefjp.github.io/lang/cpp14/deprecated_attr.html)
+
 ```cpp
 [[deprecated("please use new_func() function")]] void old_func() {}
 ```
+
 非推奨であることを示す属性．使うとコンパイル時に警告を発する  
 警告で出すメッセージも指定できるので，代わりに使って欲しい機能を示すとより親切  
 この属性が使える場所は以下の通り
+
 - クラス
 - 型の別名
 - 変数
@@ -347,12 +358,12 @@ TODO:
 - 列挙型
 - テンプレートの特殊化
 
-
 ### [maybe_unused属性(C++17)](https://cpprefjp.github.io/lang/cpp17/maybe_unused.html)
 
-⇒警告抑制タイプの属性：意図して使ってない要素に対してコンパイラに文句を言わせない   
+⇒警告抑制タイプの属性：意図して使ってない要素に対してコンパイラに文句を言わせない
 
 主に，各種宣言部分で色々使える
+
 ```cpp
 class [[maybe_unused]] X;
 using integer [[maybe_unused]] = int;
@@ -367,6 +378,7 @@ enum class [[maybe_unused]] E {
 ```
   
 関数の引数の場合，maybe_unusedを指定せずとも，引数名を定義しないことで警告を抑制できる．  
+
 ```cpp
 void func1([[maybe_unused]]int unused_arg){}
 void func2(int){}
@@ -383,7 +395,9 @@ void func2(int){}
 struct [[nodiscard]] error_info{};
 [[nodiscard]] int func(){return 0;}
 ```
+
 C++20では更に以下の改良が加わっている
+
 - [コンストラクタのオーバーロードごとに付加出来るように](https://cpprefjp.github.io/lang/cpp20/nodiscard_for_constructors.html)
 - [警告の理由の文字列を付加できるように](https://cpprefjp.github.io/lang/cpp20/nodiscard_should_have_a_reason.html)
 
@@ -403,9 +417,11 @@ switch (N) {
   default:
 }
 ```
+
 なお，最後のcaseやdefaultに記述するとコンパイルエラーとなる
 
 ### Coming Soon
+
 - [属性構文(C++11)](https://cpprefjp.github.io/lang/cpp11/attributes.html)
   - [fallthrough(c++17)](https://cpprefjp.github.io/lang/cpp17/fallthrough.html)
   - [no_unique_adress(c++20)](https://cpprefjp.github.io/lang/cpp20/language_support_for_empty_objects.html)

@@ -9,7 +9,7 @@ intro: Media Operations
 ---
 
 
-{: .-three-column}
+
 
 ### 動画をgifへ変換する
 
@@ -39,23 +39,25 @@ convert input.png output.pdf
 ```
 
 エラーが出る場合，`/etc/ImageMagick-6/policy.xml`を編集する．
+
 ```xml
 <policy domain="coder" rights="none" pattern="PDF" />
 ```
+
 を
+
 ```xml
 <policy domain="coder" rights="read|write" pattern="PDF" />
 ```
+
 に書き換える
 
-
-
 ### 画像の種類変換
+
 ```bash
 sudo apt install imagemagick
 convert input.png output.jpg
 ```
-
 
 以下のような有名フォーマットには軒並み対応している
 <p>

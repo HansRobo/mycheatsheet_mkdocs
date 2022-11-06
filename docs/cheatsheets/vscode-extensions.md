@@ -8,14 +8,13 @@ weight: -10
 intro: VSCode 拡張機能
 ---
 
-{: .-three-column}
+
 
 ### [ErrorLens](https://marketplace.visualstudio.com/items?itemName=PhilHindle.errorlens)
 
 出てきたエラーをその行に表示してくれる．エラーなら赤，警告なら黄色に着色してくれるのでこれで警告を放っておくことも減りそう
 
 ![](https://github.com/phindle/error-lens/raw/master/images/Screenshot-1.png)
-
 
 ### Docker
 

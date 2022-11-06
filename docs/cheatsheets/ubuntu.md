@@ -9,7 +9,7 @@ intro: Ubuntu
 ---
 
 
-{: .-three-column}
+
 
 ### CapsLockキーをMenuキーにする
 
@@ -60,8 +60,6 @@ discord --start-minimized
 
 [Option for Discord to start minimized on Linux](https://support.discord.com/hc/en-us/community/posts/360048037971-Option-for-Discord-to-start-minimized-on-Linux)
 
-
-
 ### Slackを最小化した状態で立ち上げる
 
 -uオプションをつける
@@ -94,6 +92,7 @@ xml2yaml -x xml.xml -s schema.xsd yaml.yaml
 sudo apt clean
 sudo apt --fix-broken install
 ```
+
 #### pip
 
 ```bash

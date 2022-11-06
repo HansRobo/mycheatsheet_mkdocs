@@ -8,7 +8,7 @@ weight: -10
 intro: GNOME Extensions
 ---
 
-{: .-three-column}
+
 
 ### Workspace Matrix
 
@@ -42,7 +42,6 @@ intro: GNOME Extensions
 Ubuntu22.04では動かないかも
 
 ![panel](https://extensions.gnome.org/extension-data/screenshots/screenshot_1082_8G7gjUt.png)
-
 
 ### Spotify-Tray
 

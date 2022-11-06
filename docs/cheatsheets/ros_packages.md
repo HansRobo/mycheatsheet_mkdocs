@@ -8,7 +8,7 @@ weight: -10
 intro: ros_packages
 ---
 
-{: .-three-column}
+
 
 ### ros2_logging_fmt
 
@@ -42,11 +42,10 @@ ROS2のパラメータをライブラリに固めて配布したり出来るラ�
 ### rosros
 
 ROS1/2の統一的Pythonインタフェースを提供するパッケージ
-https://github.com/suurjaak/rosros
+<https://github.com/suurjaak/rosros>
 
 環境変数からROSバージョンを自動切り替えできる！
 以下のようにpub/subはもちろんのこと，serviceやparameterなどにも対応する
-
 
 ```python
 import rosros

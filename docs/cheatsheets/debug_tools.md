@@ -8,7 +8,7 @@ weight: -10
 intro: Debug Tools
 ---
 
-{: .-three-column}
+
 
 ### ldd
 
@@ -19,6 +19,7 @@ ldd <options> <executable>
 ```
 
 出力例
+
 ```bash
 ldd a.out
  linux-vdso.so.1 =>  (0x00007fff089ff000)
@@ -35,4 +36,3 @@ ldd a.out
 | `-u`  | 未使用の依存関係を表示      |
 | `-v`  | 全ての情報を表示         |
 {: .-shortcuts}
-

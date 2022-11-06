@@ -8,8 +8,6 @@ weight: -10
 intro: Bash
 ---
 
-{: .-three-column}
-
 ### Bashでの文字エスケープ
 
 Bashでの文字エスケープは**シングルクオートが基本**

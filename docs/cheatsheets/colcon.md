@@ -8,10 +8,9 @@ weight: -10
 intro: colcon
 ---
 
-{: .-three-column}
+
 
 ### colconのよく使うサブコマンド
-
 
 | サブコマンド        | 説明                |
 |---------------|-------------------|
@@ -32,5 +31,3 @@ intro: colcon
 | `--parallel-workers <number>` | 最大の並列数を指定する                  |
 | `--cmake-clean-first`         | クリーンビルドする                    |
 {: .-shortcuts}
-
-
