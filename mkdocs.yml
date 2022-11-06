@@ -13,6 +13,9 @@ extra:
       link: https://twitter.com/Hans_Robo
     - icon: fontawesome/brands/github
       link: https://github.com/HansRobo
+  analytics:
+    provider: google
+    property: G-P5846VEQ4L
 copyright: "Copyright &copy; 2022 HansRobo"
 plugins:
   - search
