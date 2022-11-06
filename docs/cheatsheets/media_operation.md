@@ -1,0 +1,87 @@
+---
+title: Media Operations
+category: Ubuntu
+layout: 2017/sheet
+tags: [Featured]
+updated: 2022-06-16
+weight: -10
+intro: Media Operations
+---
+
+
+{: .-three-column}
+
+### 動画をgifへ変換する
+
+共有ライブラリへの依存関係を表示する
+
+```bash
+ffmpeg -i input.mp4 output.gif
+```
+
+よく使うオプション
+
+| オプション                  | 説明               |
+|------------------------|------------------|
+| `-r <rate>`            | フレームレートを指定       |
+| `-vf scale=<width>:-1` | 横幅を指定してリサイズ（固定比） |
+| `-ss`                  | 開始秒数を指定          |
+| `-t`                   | 動画秒数を指定          |
+{: .-shortcuts}
+
+### 画像をpdfファイルにする
+
+論文とかで使うかも？
+
+```bash
+sudo apt install imagemagick
+convert input.png output.pdf
+```
+
+エラーが出る場合，`/etc/ImageMagick-6/policy.xml`を編集する．
+```xml
+<policy domain="coder" rights="none" pattern="PDF" />
+```
+を
+```xml
+<policy domain="coder" rights="read|write" pattern="PDF" />
+```
+に書き換える
+
+
+
+### 画像の種類変換
+```bash
+sudo apt install imagemagick
+convert input.png output.jpg
+```
+
+
+以下のような有名フォーマットには軒並み対応している
+<p>
+- bmp
+- eps
+- gif
+- jpeg
+- mat
+- pdf
+- pgm
+- png
+- svg
+- webp
+</p>
+
+### 音声変換
+
+```bash
+ffmpeg -i input.wav output.mp3
+```
+
+よく使うオプション
+
+| オプション         | 説明                          |
+|---------------|-----------------------------|
+| `-ar <rate>`  | サンプリングレートを指定（省略で入力ファイルと同じに） |
+| `-f <format>` | 出力フォーマットを指定                 |
+| `-vn`         | 動画ファイルの場合，音声部分のみ取り出す        |
+{: .-shortcuts}
