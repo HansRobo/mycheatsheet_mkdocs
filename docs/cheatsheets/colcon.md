@@ -18,7 +18,6 @@ intro: colcon
 | `test`        | テストを回す            |
 | `test-result` | テスト結果を表示          |
 | `graph`       | パッケージ間の依存関係グラフを表示 |
-{: .-shortcuts}
 
 ### colcon buildのよく使うオプション
 
@@ -30,4 +29,3 @@ intro: colcon
 | `--cmake-args <CMakeに渡す引数>`   | CMakeに渡す引数を指定する              |
 | `--parallel-workers <number>` | 最大の並列数を指定する                  |
 | `--cmake-clean-first`         | クリーンビルドする                    |
-{: .-shortcuts}

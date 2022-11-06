@@ -27,7 +27,6 @@ ffmpeg -i input.mp4 output.gif
 | `-vf scale=<width>:-1` | 横幅を指定してリサイズ（固定比） |
 | `-ss`                  | 開始秒数を指定          |
 | `-t`                   | 動画秒数を指定          |
-{: .-shortcuts}
 
 ### 画像をpdfファイルにする
 
@@ -86,4 +85,3 @@ ffmpeg -i input.wav output.mp3
 | `-ar <rate>`  | サンプリングレートを指定（省略で入力ファイルと同じに） |
 | `-f <format>` | 出力フォーマットを指定                 |
 | `-vn`         | 動画ファイルの場合，音声部分のみ取り出す        |
-{: .-shortcuts}
