@@ -1,3 +1,4 @@
+repo_url: https://github.com/HansRobo/mycheatsheet_mkdocs
 site_name: Hans_Robo's cheatsheet
 theme:
   name: material
