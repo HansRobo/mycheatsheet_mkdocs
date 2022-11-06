@@ -5,6 +5,13 @@ extra:
   font:
     text: "Noto Sans JP"
     code: "Consolas"
+  search:
+    language: en
+  social:
+    - icon: fontawesome/twitter
+      link: https://twitter.com/Hans_Robo
+    - icon: fontawesome/github
+      link: https://github.com/HansRobo
 copyright: "Copyright &copy; 2022 HansRobo"
 plugins:
   - search
