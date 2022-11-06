@@ -5,7 +5,7 @@ extra:
   font:
     text: "Noto Sans JP"
     code: "Consolas"
-
+copyright: "Copyright &copy; 2022 HansRobo"
 plugins:
   - search
   - git-revision-date-localized
