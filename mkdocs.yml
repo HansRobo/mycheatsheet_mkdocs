@@ -23,6 +23,7 @@ copyright: "Copyright &copy; 2022 HansRobo"
 plugins:
   - search
   - git-revision-date-localized
+  - tags
 
 # Extensions
 markdown_extensions:
