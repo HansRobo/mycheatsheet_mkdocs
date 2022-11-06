@@ -9,9 +9,9 @@ extra:
   search:
     language: en
   social:
-    - icon: fontawesome/twitter
+    - icon: fontawesome/brands/twitter
       link: https://twitter.com/Hans_Robo
-    - icon: fontawesome/github
+    - icon: fontawesome/brands/github
       link: https://github.com/HansRobo
 copyright: "Copyright &copy; 2022 HansRobo"
 plugins:
