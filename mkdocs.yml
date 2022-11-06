@@ -1,4 +1,7 @@
 site_name: Hans_Robo's cheatsheet
 theme:
   name: material
-
+extra:
+  font:
+    text: "Noto Sans JP"
+    code: "Consolas"
