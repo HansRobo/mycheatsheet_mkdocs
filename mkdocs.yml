@@ -5,3 +5,7 @@ extra:
   font:
     text: "Noto Sans JP"
     code: "Consolas"
+
+plugins:
+  - search
+  - git-revision-date-localized
