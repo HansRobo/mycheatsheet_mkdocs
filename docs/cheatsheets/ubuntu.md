@@ -71,7 +71,7 @@ slack -u
 ### シンボリックリンクコマンドの覚え方
 
 なぜか，覚えられない`ln -s`  
-実は`cp`や`mv`コマンドとリンク元と登録名の並びが一緒！
+実は`cp`や`mv`コマンドとリンク元の登録名の並びが一緒！
 
 ```bash
  ln -s リンク元 登録名
@@ -97,4 +97,13 @@ sudo apt --fix-broken install
 
 ```bash
 rm -rf ~/.cache/pip
+```
+
+### ファイルの最大ウォッチ数を増やす
+
+IDEをたくさん開き過ぎたときなど，OSのファイルウォッチ数が足りない時がある
+
+```bash
+sudo echo "fs.inotify.max_user_watches=524288" >> /etc/sysctl.conf
+sudo sysctl -p
 ```
