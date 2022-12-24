@@ -17,9 +17,3 @@ ros2 run ros_packages executable --ros-args -p <parameter_name>:=<parameter_valu
 ```
 
 参考：https://docs.ros.org/en/galactic/How-To-Guides/Node-arguments.html#setting-parameters-directly-from-the-command-line
-
-
-
-
-
-
