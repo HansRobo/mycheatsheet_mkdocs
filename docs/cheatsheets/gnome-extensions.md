@@ -12,25 +12,25 @@ intro: GNOME Extensions
 
 ### Workspace Matrix
 
-[extensions.gnome.org](https://extensions.gnome.org/extension/1485/workspace-matrix/)
+[Workspace Matrix - GNOME Shell Extensions](https://extensions.gnome.org/extension/1485/workspace-matrix/)
 
 ![screenshot](https://extensions.gnome.org/extension-data/screenshots/screenshot_1485.png)
 
 ### WinTile
 
-[extensions.gnome.org](https://extensions.gnome.org/extension/1723/wintile-windows-10-window-tiling-for-gnome/)
+[WinTile: Windows 10 window tiling for GNOME - GNOME Shell Extensions](https://extensions.gnome.org/extension/1723/wintile-windows-10-window-tiling-for-gnome/)
 
 ![screenshot](https://extensions.gnome.org/extension-data/screenshots/screenshot_1723.png)
 
 ### gTile
 
-[extensions.gnome.org](https://extensions.gnome.org/extension/28/gtile/)
+[gTile - GNOME Shell Extensions](https://extensions.gnome.org/extension/28/gtile/)
 
 ![screenshot](https://extensions.gnome.org/extension-data/screenshots/screenshot_28.png)
 
 ### GitHub Notifications
 
-[extensions.gnome.org](https://extensions.gnome.org/extension/1125/github-notifications/)
+[Github Notifications - GNOME Shell Extensions](https://extensions.gnome.org/extension/1125/github-notifications/)
 
 ![task-bar](https://extensions.gnome.org/extension-data/screenshots/screenshot_1125_WJMldKq.png)
 
@@ -44,7 +44,7 @@ intro: GNOME Extensions
 
 ### Spotify-Tray
 
-[extensions.gnome.org](https://extensions.gnome.org/extension/4472/spotify-tray/)
+[spotify-tray - GNOME Shell Extensions](https://extensions.gnome.org/extension/4472/spotify-tray/)
 
 ![screenshot](https://extensions.gnome.org/extension-data/screenshots/screenshot_4472.png)
 
