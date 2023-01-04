@@ -47,3 +47,24 @@ cmake_parse_arguments(
 - CMakeには名前空間がないのでプレフィックスをつけることで名前の衝突を回避
 	- 今回は`MYFUNC_VAR1`とかになる
 - パースされなかったものは`PREFIX_UNPARSED_ARGUMENTS`に詰められる
+
+## 存在するかわからないパッケージを扱いながらament_cmake_autoを使う
+
+```CMake
+find_package(ament_cmake_auto REQUIRED)  
+  
+ament_auto_find_build_dependencies()  
+  
+find_package(<pkg_name>)  
+if( <pkg_name>_FOUND )  
+  add_compile_options(-D USE_<pkg_name>)  
+  list(APPEND ${PROJECT_NAME}_BUILD_DEPENDS <pkg_name>)  
+  list(APPEND ${PROJECT_NAME}_BUILD_EXPORT_DEPENDS <pkg_name>)  
+  list(APPEND ${PROJECT_NAME}_EXEC_DEPENDS <pkg_name>)  
+  list(APPEND ${PROJECT_NAME}_BUILD_DEPENDS <pkg_name>)  
+  list(APPEND ${PROJECT_NAME}_FOUND_BUILD_DEPENDS <pkg_name>)  
+  list(APPEND ${PROJECT_NAME}_FOUND_DEFINITIONS ${<pkg_name>_DEFINITIONS})  
+  list(APPEND ${PROJECT_NAME}_FOUND_INCLUDE_DIRS ${<pkg_name>_INCLUDE_DIRS})  
+  list(APPEND ${PROJECT_NAME}_FOUND_LIBRARIES ${<pkg_name>_LIBRARIES})  
+endif()
+```
