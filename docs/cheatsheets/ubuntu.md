@@ -107,3 +107,14 @@ IDEをたくさん開き過ぎたときなど，OSのファイルウォッチ数
 sudo echo "fs.inotify.max_user_watches=524288" >> /etc/sysctl.conf
 sudo sysctl -p
 ```
+
+### イコライザを使う
+PulseEffectsというのが便利
+```bash
+sudo apt install lsp-plugins-lv2
+sudo apt install pulseeffects
+```
+
+エフェクトの中でも応答関数をいじる（？）Convolverというのが良い
+[EasyEffects-Presets/Dolby ATMOS ((128K MP3)) 1.Default.irs at master · JackHack96/EasyEffects-Presets · GitHub](https://github.com/JackHack96/EasyEffects-Presets/blob/master/irs/Dolby%20ATMOS%20((128K%20MP3))%201.Default.irs)
+このDolby ATOMOSを名乗っているプリセットが好み
