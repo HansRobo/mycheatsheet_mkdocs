@@ -46,6 +46,12 @@
 
 ## ament_auto_find_build_dependencies
 
+```CMakeLists.txt
+ament_auto_find_build_dependencies(
+	REQUIRED geometry_msgs
+)
+```
+
 ament_package_xml()で `build/<pkg>/ament_cmake_core/package.cmake`にざっと情報が抜き出される
 [ament_cmake/ament_package_xml.cmake at humble · ament/ament_cmake · GitHub](https://github.com/ament/ament_cmake/blob/humble/ament_cmake_core/cmake/core/ament_package_xml.cmake)
 ```package.cmake
@@ -65,3 +71,18 @@ set(traffic_simulator_EXPORT_TAGS)
 list(APPEND traffic_simulator_EXPORT_TAGS "<build_type>ament_cmake</build_type>")
 ```
 
+ここで処理したくない依存を合流させるには以下のような記述が必要
+```CMakeLists.txt
+find_package(autoware_adapi_v1_msgs)  
+if( autoware_adapi_v1_msgs_FOUND )  
+  add_compile_options(-D USE_ADAPI_V1_MSGS)  
+  list(APPEND ${PROJECT_NAME}_BUILD_DEPENDS autoware_adapi_v1_msgs)  
+  list(APPEND ${PROJECT_NAME}_BUILD_EXPORT_DEPENDS autoware_adapi_v1_msgs)  
+  list(APPEND ${PROJECT_NAME}_EXEC_DEPENDS autoware_adapi_v1_msgs)  
+  list(APPEND ${PROJECT_NAME}_BUILD_DEPENDS autoware_adapi_v1_msgs)  
+  list(APPEND ${PROJECT_NAME}_FOUND_BUILD_DEPENDS autoware_adapi_v1_msgs)  
+  list(APPEND ${PROJECT_NAME}_FOUND_DEFINITIONS ${autoware_adapi_v1_msgs_DEFINITIONS})  
+  list(APPEND ${PROJECT_NAME}_FOUND_INCLUDE_DIRS ${autoware_adapi_v1_msgs_INCLUDE_DIRS})  
+  list(APPEND ${PROJECT_NAME}_FOUND_LIBRARIES ${autoware_adapi_v1_msgs_LIBRARIES})  
+endif()
+```
