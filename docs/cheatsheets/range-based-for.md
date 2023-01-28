@@ -1,8 +1,8 @@
 ---
-title: 範囲for文
+title: C++｜範囲for文
 category: C++
 layout: 2017/sheet
-tags: [Featured]
+tags: [C++]
 updated: 2022-06-16
 weight: -10
 intro: 範囲for文の使い方

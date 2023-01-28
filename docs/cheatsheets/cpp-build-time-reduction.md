@@ -1,8 +1,8 @@
 ---
-title: C++ ビルド時間 短縮
+title: C++｜ビルド時間の短縮テクニック
 category: C++
 layout: 2017/sheet
-tags: [Featured]
+tags: [C++]
 updated: 2022-08-19
 weight: -10
 intro: C++ ビルド時間 短縮

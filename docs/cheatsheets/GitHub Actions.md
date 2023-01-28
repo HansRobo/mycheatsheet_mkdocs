@@ -1,4 +1,12 @@
-
+---
+title: GitHub Actions
+category: Tools
+layout: 2017/sheet
+tags: [Tools]
+updated: 2023-01-28
+weight: -10
+intro: GitHub Actions
+---
 
 ## ファイルを同期したい
 

@@ -1,8 +1,8 @@
 ---
-title: GNOME Extensions
+title: おすすめGNOMEExtensions集
 category: Ubuntu, Tools
 layout: 2017/sheet
-tags: [Featured]
+tags: [Ubuntu, Tools]
 updated: 2022-08-07
 weight: -10
 intro: GNOME Extensions

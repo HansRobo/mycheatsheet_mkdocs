@@ -2,7 +2,7 @@
 title: Git
 category: Ubuntu
 layout: 2017/sheet
-tags: [Featured]
+tags: [Tools]
 updated: 2022-06-16
 weight: -10
 intro: Git

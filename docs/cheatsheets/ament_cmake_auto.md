@@ -1,3 +1,13 @@
+---
+title: ament_cmake_auto
+category: Tool, ROS
+layout: 2017/sheet
+tags: [ROS, Tools]
+updated: 2023-01-28
+created: 2023-01-28 04:04:29
+weight: -10
+intro: ament_cmake_auto
+---
 
 ## ament_auto_add_library
 
