@@ -2,7 +2,7 @@
 title: colcon
 category: ROS
 layout: 2017/sheet
-tags: [Featured]
+tags: [ROS]
 updated: 2022-06-16
 weight: -10
 intro: colcon

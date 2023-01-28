@@ -1,11 +1,11 @@
 ---
-title: ROS Packages
+title: ROS Tips
 category: ROS
 layout: 2017/sheet
-tags: [Featured]
-updated: 2022-08-03
+tags: [ROS]
+updated: 2023-01-28
 weight: -10
-intro: ros_packages
+intro: ROS Tips
 ---
 
 

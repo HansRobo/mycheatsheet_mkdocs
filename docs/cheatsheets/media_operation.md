@@ -1,5 +1,5 @@
 ---
-title: Media Operations
+title: メディア操作メモ
 category: Ubuntu
 layout: 2017/sheet
 tags: [Featured]

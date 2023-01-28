@@ -1,8 +1,8 @@
 ---
-title: C++ Idioms
+title: C++｜便利イディオム
 category: C++
 layout: 2017/sheet
-tags: [Featured]
+tags: [C++]
 updated: 2022-06-16
 weight: -10
 intro: C++ Idioms
