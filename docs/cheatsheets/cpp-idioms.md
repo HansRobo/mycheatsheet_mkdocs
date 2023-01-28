@@ -5,7 +5,7 @@ layout: 2017/sheet
 tags: [C++]
 updated: 2022-06-16
 weight: -10
-intro: C++ Idioms
+intro: C++｜便利イディオム
 ---
 
 

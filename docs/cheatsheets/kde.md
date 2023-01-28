@@ -5,7 +5,7 @@ layout: 2017/sheet
 tags: [Ubuntu]
 updated: 2022-06-16
 weight: -10
-intro: KDE
+intro: KDE関連メモ
 ---
 
 
