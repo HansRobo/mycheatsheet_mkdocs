@@ -5,7 +5,7 @@ layout: 2017/sheet
 tags: [Tools]
 updated: 2022-06-16
 weight: -10
-intro: Debug Tools
+intro: デバッグのための道具
 ---
 
 

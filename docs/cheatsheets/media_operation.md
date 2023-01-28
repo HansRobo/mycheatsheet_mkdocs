@@ -5,7 +5,7 @@ layout: 2017/sheet
 tags: [Featured]
 updated: 2022-06-16
 weight: -10
-intro: Media Operations
+intro: メディア操作メモ
 ---
 
 

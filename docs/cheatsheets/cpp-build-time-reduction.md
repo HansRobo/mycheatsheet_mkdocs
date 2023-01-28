@@ -5,7 +5,7 @@ layout: 2017/sheet
 tags: [C++]
 updated: 2022-08-19
 weight: -10
-intro: C++ ビルド時間 短縮
+intro: C++｜ビルド時間の短縮テクニック
 ---
 
 
