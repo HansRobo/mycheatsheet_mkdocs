@@ -31,3 +31,10 @@ pull_request
 	- paths-ignoreで書けてpathsで書けない表現は無く，逆は成り立たない
 
 参考：[GitHub Actionsにおけるpathsとpaths-ignoreをベン図で理解する - Qiita](https://qiita.com/nacam403/items/3e2a5df5e88ba20aa76a)
+
+### GitHub Actionsの中でsshを使ったgit cloneがしたい
+
+まずは，パーソナルアクセストークンを使った方法で代替できないかどうかを考える．
+それでもやりたければ以下の彩都を参考にする
+
+[How to clone a private repository in GitHub Action using SSH | by Samyakt Jain | Medium](https://samyaktjain24.medium.com/how-to-clone-a-private-repository-in-github-action-using-ssh-38d0de8c09d8)

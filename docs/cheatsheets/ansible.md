@@ -29,7 +29,7 @@ pipx install --include-deps --force "ansible==6.*"
 
 ## `apt_repository`の書き込み先
 
-`dest`を指定しない場合，`repo`のURLからいい感じに書き込み先が生成される．
+`filename`を指定しない場合，`repo`のURLからいい感じに書き込み先が生成される．
 
 例：
 - `repo` : `deb https://repo.vivaldi.com/archive/deb/ stable main`
@@ -50,6 +50,24 @@ Target Packages (main/binary-amd64/Packages) is configured multiple times in /et
 		repo: "deb https://repo.vivaldi.com/archive/deb/ stable main"
 		state: present
 		update_cache: true
-		dest: /etc/apt/sources.list.d/vivaldi.list
+		filename: vivaldi
 	become: true
+```
+
+
+### 変数名にハイフンを使ってはいけない
+
+以下のようにハイフンを使うとエラーが出る
+
+```ansible
+- name: check gnome-terminal
+	stat:
+		path: /usr/bin/gnome-terminal
+	register: gnome-terminal-stat
+```
+
+エラー
+
+```shell
+fatal: [localhost]: FAILED! => {"msg": "Invalid variable name in 'register' specified: 'gnome-terminal-stat'"}
 ```
