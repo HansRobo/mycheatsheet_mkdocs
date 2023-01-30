@@ -11,8 +11,8 @@ intro: ROS News
 
 ### ROS2でのNodeHandle
 
-プルリク：[Implement Unified Node Interface (NodeInterfaces class) by methylDragon · Pull Request #2041 · ros2/rclcpp · GitHub](https://github.com/ros2/rclcpp/pull/2041)
-議論：[Proposal for NodeHandle concept that simplifies calling APIs with node-like objects · Issue #831 · ros2/rclcpp · GitHub](https://github.com/ros2/rclcpp/issues/831#issue-486100658)
+プルリク：[Pull Request #2041 · ros2/rclcpp · GitHub](https://github.com/ros2/rclcpp/pull/2041)  
+議論：[Issue #831 · ros2/rclcpp · GitHub](https://github.com/ros2/rclcpp/issues/831#issue-486100658)
 
 ROS1時代に逆行しようと言うのではなく，使いにくかったインタフェースを直すという意味
 
