@@ -8,7 +8,15 @@ updated: 2023-01-20
 weight: -10
 intro: ROS News
 ---
+
 ### `rclcpp::spin_until_timeout`関数の追加
+
+テストを書く時に便利に使えそう
+
+```c++
+void spin_until_timeout(rclcpp::node_interfaces::NodeBaseInterface::SharedPtr node_ptr, 
+                        std::chrono::duration< TimeRepT, TimeT > timeout)
+```
 
 - [提案Issue](https://github.com/ros2/rclcpp/issues/1821)
 - [PullRequest #1874](https://github.com/ros2/rclcpp/pull/1874)
