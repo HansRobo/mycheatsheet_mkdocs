@@ -8,6 +8,31 @@ updated: 2023-01-20
 weight: -10
 intro: ROS News
 ---
+### `rclcpp::spin_until_timeout`関数の追加
+
+- [提案Issue](https://github.com/ros2/rclcpp/issues/1821)
+- [PullRequest #1874](https://github.com/ros2/rclcpp/pull/1874)
+	- 2022/01/24に`rolling`にマージ
+- [デグレ発覚によりリバート #1956](https://github.com/ros2/rclcpp/pull/1956)
+	- 2022/01/25
+- [現在再マージに向けて調整中 #1957](https://github.com/ros2/rclcpp/pull/1957)
+
+### `ros2 interface package` にフィルターのオプション追加
+
+[Add interface type filters to ros2 interface package by DLu · Pull Request #765 · ros2/ros2cli · GitHub](https://github.com/ros2/ros2cli/pull/765)
+
+以下のようにズラッとでてくるのをフィルターするため以下のオプションが追加される
+- `--only-msgs`
+- `--only-srvs`
+- `--only-actions`
+- 
+```shell
+hans@hans$ ros2 interface package std_msgs
+std_msgs/msg/Char
+std_msgs/msg/Float32MultiArray
+std_msgs/msg/Int64MultiArray
+...
+```
 
 ### ROS2でのNodeHandle
 
