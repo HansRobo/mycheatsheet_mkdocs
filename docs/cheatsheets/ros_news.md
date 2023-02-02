@@ -11,7 +11,7 @@ intro: ROS News
 
 ### `rclcpp::spin_until_timeout`関数の追加
 
-テストを書く時に便利に使えそう
+テストを書く時に便利に使えそう  
 
 ```c++
 void spin_until_timeout(rclcpp::node_interfaces::NodeBaseInterface::SharedPtr node_ptr, 
