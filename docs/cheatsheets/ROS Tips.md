@@ -41,3 +41,31 @@ if( <pkg_name>_FOUND )
   list(APPEND ${PROJECT_NAME}_FOUND_LIBRARIES ${<pkg_name>_LIBRARIES})  
 endif()
 ```
+
+### package.xmlの<depend>に書けるconditionで使える変数
+
+[REP 149 -- Package Manifest Format Three Specification (ROS.org)](https://www.ros.org/reps/rep-0149.html#build-depend-multiple:~:text=condition%3D%22CONDITION_EXPRESSION%22,1%22%3Eroscpp%3C/depend%3E)
+
+基本，環境変数だけ
+
+[rosdep/rospkg_loader.py L146](https://github.com/ros-infrastructure/rosdep/blob/master/src/rosdep2/rospkg_loader.py#L146)
+contextとして環境変数をぶち込んでいる．逆にこれ以外のコンテキストは存在しない
+
+```python
+pkg.evaluate_conditions(os.environ)
+```
+  
+[catkin\_pkg/condition.py L47](https://github.com/ros-infrastructure/catkin_pkg/blob/master/src/catkin_pkg/condition.py#L47)
+`$`付き文字が抽出されて...
+  
+```python
+identifier = pp.Word('$', pp.alphanums + '_', min=2).setName('identifier')
+```
+  
+[catkin\_pkg/condition.py L102-103](https://github.com/ros-infrastructure/catkin_pkg/blob/master/src/catkin_pkg/condition.py#L102-L103)
+コンテキストで解決される
+
+```python
+def __call__(self, context):
+	return str(context.get(self.value[1:], ''))
+```
