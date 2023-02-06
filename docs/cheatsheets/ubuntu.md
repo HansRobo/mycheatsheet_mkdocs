@@ -11,7 +11,7 @@ intro: Ubuntu
 
 ## `apt-key`の代替手段
 
-廃止となるapt-keyの代替手段について
+廃止となるapt-keyの代替手段について  
 [Ubuntu 22.04 その20 - apt-keyの廃止方針と移行措置・Ubuntu 22.04 LTSが最後に - kledgeb](https://kledgeb.blogspot.com/2022/01/ubuntu-2204-20-apt-keyubuntu-2204-lts.html)
 
 ### 代替手段1：`/etc/apt/trusted.gpg.d/`に鍵を保存する
