@@ -9,7 +9,25 @@ intro: Ubuntu
 ---
 
 
+## `apt-key`の代替手段
 
+廃止となるapt-keyの代替手段について
+[Ubuntu 22.04 その20 - apt-keyの廃止方針と移行措置・Ubuntu 22.04 LTSが最後に - kledgeb](https://kledgeb.blogspot.com/2022/01/ubuntu-2204-20-apt-keyubuntu-2204-lts.html)
+
+### 代替手段1：`/etc/apt/trusted.gpg.d/`に鍵を保存する
+
+該当ディレクトリに保存すると自動で使われるようになる
+
+### 代替手段2：`/usr/local/share/keyrings/`に鍵を保存し，`source.list`で参照する
+
+`/etc/apt/trusted.gpg.d/`を使用する方法は `apt-key`の問題でもあった，追加した鍵が全てのリポジトリに対して適用されてしまうセキュリティ上の問題が解決されていない．
+以下のように`source.list`にて`signed-by`で鍵を指定することで問題は解決される．
+
+```source.list
+deb [arch=amd64 signed-by=/usr/local/share/keyrings/google.gpg] http://dl.google.com/linux/chrome/deb/ stable main
+```
+
+参考：[apt-keyはなぜ廃止予定となったのか/今後リポジトリ鍵はどう運用すべきか | gihyo.jp](https://gihyo.jp/admin/serial/01/ubuntu-recipe/0675#sec3)
 
 ### CapsLockキーをMenuキーにする
 

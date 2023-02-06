@@ -8,6 +8,23 @@ weight: -10
 intro: ROS Tips
 ---
 
+## ROS パッケージを debianパッケージ化したい
+
+GitHub Actionが提供されている
+[jspricke/ros-deb-builder-action](https://github.com/jspricke/ros-deb-builder-action)
+
+これだけでできるらしい
+
+```yaml
+uses: jspricke/ros-deb-builder-action@main
+with:
+  ROS_DISTRO: rolling
+  DEB_DISTRO: jammy
+  GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+```
+
+MoveIt2でも使われている他，Autowareでも試用されている
+[Network Dependents · jspricke/ros-deb-builder-action · GitHub](https://github.com/jspricke/ros-deb-builder-action/network/dependents)
 ### 公式ツール・パッケージの置き場所
 
 複数オーガナイゼーションに別れて配置されているので忘れやすいのでメモ
