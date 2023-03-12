@@ -490,6 +490,26 @@ void hoge(Fuga fuga)
 hoge({.a = 1, .b=2, .c=3})
 ```
 
+### INVOKE要件
+
+- 関数呼び出しを抽象化した，仮想操作”INVOKE”についての要件
+- C++17からは `std::invoke`として実体化されている
+
+#### 用語
+
+| 用語              | 雑な要約                             | 例               |
+| ----------------- | ------------------------------------ | ---------------- |
+| call-signature    | 関数の宣言文の型情報だけ残したもの   | int (float, int) |
+| callable-type     | 関数呼び出し演算子`()`を適用できる型 |                  |
+| callable-object   | callable-type型のオブジェクト        |                  |
+| call-wrapper-type |                                      |                  |
+| call-wrapper      | call-wrapper-type型のオブジェクト    |                  |
+| target-object                  |　callable-objectに保持されているオブジェクト| ラムダ式でキャプチャする変数などが該当する？                  |
+
+
+### [std::invoke(C++17)](https://cpprefjp.github.io/reference/functional/invoke.html)
+
+
 
 ### Coming Soon
 
