@@ -2,10 +2,10 @@
 title: ROS Tools
 category: ROS
 layout: 2017/sheet
-tags: [ROS]
+tags: [Featured]
 updated: 2022-08-03
 weight: -10
-intro: ROS Tools
+intro: ros_tools
 ---
 
 <style type="text/css">

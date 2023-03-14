@@ -2,7 +2,7 @@
 title: VSCode 拡張機能
 category: Tools
 layout: 2017/sheet
-tags: [Tools]
+tags: [Featured]
 updated: 2022-08-30
 weight: -10
 intro: VSCode 拡張機能

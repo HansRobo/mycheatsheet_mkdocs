@@ -1,11 +1,11 @@
 ---
-title: C++｜cppreference.com勉強日記
+title: cppreference.com 日記
 category: C++
 layout: 2017/sheet
 tags: [Featured]
 updated: 2022-06-16
 weight: -10
-intro: C++｜cppreference.com勉強日記
+intro: cppreference.com日記
 ---
 
 
@@ -417,79 +417,6 @@ switch (N) {
 ```
 
 なお，最後のcaseやdefaultに記述するとコンパイルエラーとなる
-
-### [optional::and_then (C++23)](https://cpprefjp.github.io/reference/optional/optional/and_then.html)
-
-無効値チェックだけのためのifがなくせそう
-
-```c++
-std::optional<int> opt;
-
-// before
-if(opt){
-	// do something
-}
-
-// after
-opt.and_then([](int val){
-	// do something
-})
-```
-
-↑は1つだけだが，以下のような処理が複雑化したり連続したりすると威力を発揮しそう
-
-```c++
-// before
-if(opt){
-	if(opt.value != 2){
-		// do something
-	}
-}
-// after
-opt.and_then([](int val){
-	if(val ==2){
-		return null_opt;
-	}else{
-		return val;
-	}
-}).and_then([](int val){
-	// do something
-})
-```
-
-### [指示付き初期化(C++20)](https://cpprefjp.github.io/lang/cpp20/designated_initialization.html)
-```c++
-struct Point3D { int x; int y; int z = 0; };
-```
-に対して
-```c++
-Point3D p2 {.x = 1, .y = 2, .z = 3};
-```
-と言ったメンバ名を指定しての初期化が可能になる
-
-#### 用語
-| 単語                   | 説明                                                                        |
-| ---------------------- | --------------------------------------------------------------------------- |
-| 指示子                 | `.x`とかのメンバ名を指定する書き方のこと                                    |
-| 指示付き初期化子       | `.x = 1` や`.y{2}`などの指示子を使った初期化のこと                          |
-| 指示付き初期化子リスト | `{.x = 1, .y = 2, .z = 3}` など指示付き初期化子が使われた初期化リストのこと |
-
-#### 注意
-- 指示付き初期化子の順番は定義した順番である必要がある
-	- 違う場合はコンパイルエラー
-- 初期化子は直接ネストしてアクセスできない
-	- 構造体が入れ子になっている場合など
-		- NG：{ .a.b = 1 }
-		- OK：{ .a{ .b = 1 } }
-#### 名前付き引数のようなもの
-```c++
-struct Fuga{
-int a,b,c;
-}
-void hoge(Fuga fuga)
-hoge({.a = 1, .b=2, .c=3})
-```
-
 
 ### Coming Soon
 

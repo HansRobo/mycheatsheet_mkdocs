@@ -1,11 +1,11 @@
 ---
-title: デバッグのための道具
+title: Debug Tools
 category: Ubuntu
 layout: 2017/sheet
-tags: [Tools]
+tags: [Featured]
 updated: 2022-06-16
 weight: -10
-intro: デバッグのための道具
+intro: Debug Tools
 ---
 
 

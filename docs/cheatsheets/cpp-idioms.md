@@ -1,11 +1,11 @@
 ---
-title: C++｜便利イディオム
+title: C++ Idioms
 category: C++
 layout: 2017/sheet
-tags: [C++]
+tags: [Featured]
 updated: 2022-06-16
 weight: -10
-intro: C++｜便利イディオム
+intro: C++ Idioms
 ---
 
 
@@ -29,4 +29,3 @@ intro: C++｜便利イディオム
 ### Type Erasure
 
 [More C++ Idioms(English version)](https://en.wikibooks.org/wiki/More_C++_Idioms/Type_Erasure)
-

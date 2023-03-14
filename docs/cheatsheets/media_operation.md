@@ -1,11 +1,11 @@
 ---
-title: メディア操作メモ
+title: Media Operations
 category: Ubuntu
 layout: 2017/sheet
 tags: [Featured]
 updated: 2022-06-16
 weight: -10
-intro: メディア操作メモ
+intro: Media Operations
 ---
 
 

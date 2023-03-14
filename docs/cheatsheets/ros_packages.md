@@ -1,11 +1,11 @@
 ---
-title: ROS便利パッケージ集
+title: ROS Packages
 category: ROS
 layout: 2017/sheet
-tags: [ROS]
+tags: [Featured]
 updated: 2022-08-03
 weight: -10
-intro: ROS便利パッケージ集
+intro: ros_packages
 ---
 
 

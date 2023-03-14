@@ -1,11 +1,11 @@
 ---
-title: KDE関連メモ
+title: KDE
 category: Ubuntu
 layout: 2017/sheet
-tags: [Ubuntu]
+tags: [Featured]
 updated: 2022-06-16
 weight: -10
-intro: KDE関連メモ
+intro: KDE
 ---
 
 
