@@ -14,7 +14,7 @@ aptのダウンロード並列化によって爆速化する
 
 ```bash
 sudo add-apt-repository ppa:apt-fast/stable
-sudo apt install apt-fastb
+sudo apt install apt-fast
 ```
 
 ## `apt-key`の代替手段
