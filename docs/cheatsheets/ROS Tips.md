@@ -8,6 +8,18 @@ weight: -10
 intro: ROS Tips
 ---
 
+## vcstool
+
+OSRFでROS 2プロジェクトを引っ張ってきたDirk Thomas氏によって作られたメタリポジトリなどでのvcs操作をかんたんにするツール．
+ただし，氏がNVIDIAに移籍してからは氏の対応が極端に遅くなり，IssueやPullRequestでは氏へ数多の”Friendly Ping”が送られているがそのほとんどは返信がない．  
+
+ROSコミュニティの中核の一つをなすこのツールがフリーズする状況は芳しくないため，  
+Steven! Ragnarök氏のフォークやvcstools2を作るものも現れている
+
+参考：
+[Status of vcstool · Issue #242 · dirk-thomas/vcstool · GitHub](https://github.com/dirk-thomas/vcstool/issues/242)  
+[GitHub - MaxandreOgeret/vcstool2: Vcstool2 is an attempt at continuing development of vcstool, a command line tool designed to make working with multiple repositories easier.](https://github.com/MaxandreOgeret/vcstool2/)  
+
 ## ROS パッケージを debianパッケージ化したい
 
 GitHub Actionが提供されている
