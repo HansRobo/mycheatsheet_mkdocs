@@ -14,7 +14,7 @@ OSRFでROS 2プロジェクトを引っ張ってきたDirk Thomas氏によって
 ただし，氏がNVIDIAに移籍してからは氏の対応が極端に遅くなり，IssueやPullRequestでは氏へ数多の”Friendly Ping”が送られているがそのほとんどは返信がない．  
 
 ROSコミュニティの中核の一つをなすこのツールがフリーズする状況は芳しくないため，  
-Steven! Ragnarök氏のフォークやvcstools2を作るものも現れている
+Steven! Ragnarök氏のフォークやvcstools2を作るものも現れている  
 
 参考：
 [Status of vcstool · Issue #242 · dirk-thomas/vcstool · GitHub](https://github.com/dirk-thomas/vcstool/issues/242)  
