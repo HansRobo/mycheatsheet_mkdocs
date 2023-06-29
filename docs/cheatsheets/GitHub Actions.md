@@ -41,3 +41,4 @@ pull_request
     host: github.com
     private-key: ${{ secrets.GIT_SSH_SECRET }}
 ```
+

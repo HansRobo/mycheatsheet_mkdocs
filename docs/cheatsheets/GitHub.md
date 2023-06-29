@@ -13,3 +13,5 @@ intro: GitHub
 1. `github.com/org/repo` の後ろに `/compare`を追加してアクセス
 2. base, compareのそれぞれにブランチ名・タグ名・コミットハッシュなどを設定して比較
 
+### フォークを常に最新に保つ
+
