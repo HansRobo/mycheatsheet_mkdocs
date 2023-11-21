@@ -509,7 +509,15 @@ hoge({.a = 1, .b=2, .c=3})
 
 ### [std::invoke(C++17)](https://cpprefjp.github.io/reference/functional/invoke.html)
 
+TBD
 
+## [std::copysign(C++11)](https://cpprefjp.github.io/reference/cmath/copysign.html)
+
+地味だけど結構うれしいやつ．
+今まで，3項演算子やif文を使って符号判定してプラスマイナス反転させていた処理を簡潔に書くことができる．
+```c++
+auto value = std::copysign(<絶対値マン>, <符号マン>)
+```
 
 ### Coming Soon
 
