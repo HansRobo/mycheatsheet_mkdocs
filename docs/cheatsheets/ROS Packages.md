@@ -60,3 +60,11 @@ srv = rosros.create_service(params["service"], "std_srvs/Trigger", on_trigger)
 pub = rosros.create_publisher(params["topic"], "std_msgs/Bool", latch=True, queue_size=2)
 rosros.spin()
 ```
+
+### realtime_tools
+
+[GitHub - ros-controls/realtime\_tools](https://github.com/ros-controls/realtime_tools)
+
+色々ツールがあるが，実装を見て何がリアルタイムになって何がリアルタイムにならないか把握し上で使ったほうが良さそう．
+例えば，RealTimePublisherはpublish関数にブロックされる時間が短くなるだけで通信がリアルタイムになったりする効果はない
+

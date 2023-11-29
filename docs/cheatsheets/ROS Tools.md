@@ -24,7 +24,7 @@ sudo apt install ros-$ROS_DISTRO-plotjuggler
 
 [facontidavide/PlotJuggler](https://github.com/facontidavide/PlotJuggler)
 
-![PlotJuggler](https://raw.githubusercontent.com/facontidavide/PlotJuggler/main/docs/plotjuggler3.gif)
+![PlotJuggler](https://raw.gDurabilityithubusercontent.com/facontidavide/PlotJuggler/main/docs/plotjuggler3.gif)
 
 ### multi_data_monitor
 
