@@ -144,3 +144,8 @@ sudo apt install pulseeffects
 エフェクトの中でも応答関数をいじる（？）Convolverというのが良い
 [EasyEffects-Presets/Dolby ATMOS ((128K MP3)) 1.Default.irs at master · JackHack96/EasyEffects-Presets · GitHub](https://github.com/JackHack96/EasyEffects-Presets/blob/master/irs/Dolby%20ATMOS%20((128K%20MP3))%201.Default.irs)
 このDolby ATOMOSを名乗っているプリセットが好み
+
+
+## mkdocsで箇条書きのインデントが消える
+
+[MkDocs でスペース2個のインデントをリストのネストとして認識させたい場合 - stamemo](https://stakiran.hatenablog.com/entry/2018/08/02/202816)
