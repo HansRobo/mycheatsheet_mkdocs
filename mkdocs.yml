@@ -41,6 +41,8 @@ markdown_extensions:
       smart_enable: all
   - pymdownx.caret
   - pymdownx.details
+  - mdx_truly_sane_lists:
+      nested_indent: 2
   # - pymdownx.emoji:
   #     emoji_generator: !!python/name:materialx.emoji.to_svg
   #     emoji_index: !!python/name:materialx.emoji.twemoji
