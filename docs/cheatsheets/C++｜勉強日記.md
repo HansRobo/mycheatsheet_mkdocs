@@ -519,6 +519,80 @@ TBD
 auto value = std::copysign(<絶対値マン>, <符号マン>)
 ```
 
+
+## [std::exchange(C++14)](https://cpprefjp.github.io/reference/utility/exchange.html)
+
+値を書き換えて、書き換える前の値を返す。
+
+```C++
+auto <古い値の格納変数> = std::exchange(<書き換え対象変数>, <新しい値>)
+```
+
+後置インクリメント演算子みたいなイメージかも
+
+```C++
+int value = 0;
+std::cout << value++ << std::endl; // output: 0
+std::cout << std::exchange(value, value+1) std::endl; // output: 1
+std::cout << value << std::endl; // output: 2
+```
+
+
+## [std::swap(C++11)](https://cpprefjp.github.io/reference/utility/swap.html)
+
+2つの値を入れ替えるswap動作を行う。配列に対しても使える。
+
+```C++
+int a,b;
+std::swap(a,b);
+```
+
+今まで以下のようにわざわざ一時変数を作って値を入れ替えていたのが1行でかける。
+
+```C++
+int a,b;
+int tmp = a;
+a = b;
+b = tmp;
+```
+
+少し脇道にそれるが`std::exchange`を知っていたらこちらでもかける
+
+```C++
+int a,b;
+a = std::exchange(b,a);
+```
+
+## [std::partition(C++03)](https://cpprefjp.github.io/reference/algorithm/partition.html)
+
+条件を表す関数オブジェクトを指定して、条件を満たす（関数がtrueを返す）要素をコンテナの前の方へ、条件を満たさないものを後ろに集める。
+
+```C++
+std::vector<int> v = {1,2,3,4,5};
+// 条件: 偶数
+auto pos = std::partition(v.begin(), v.end(), [](int x){ return x % 2 == 0; });
+// v: {4,2,3,1,5}, pos: 添字2に当たるイテレータ
+```
+
+
+## [std::mismatch(C++03)](https://cpprefjp.github.io/reference/algorithm/mismatch.html)
+
+与えられた2つの範囲のうち、最初に一致しない位置を検索する。
+
+```C++
+std::vector<int> a = {1,2,3,4,5};
+std::vector<int> b = {4,5,6,6,7};
+
+// mod3が一致しない最初の位置
+auto [a_pos, b_pos] = std::mismatch(a.begin(), a.end(), b.begin(), [](const int & a, const int & b){ return a%3 == b%3; });
+// a_pos: 位置3, 内容4のイテレータ
+// b_pos: 位置3, 内容6のイテレータ
+```
+
+- `==`演算子の代わりの関数オブジェクトを指定することもできる
+- ミスマッチが見つからなかったときはこういう検索系関数のお決まり通り最後の要素を返す。
+- 2つ目の範囲の最後は省略可（a.size() > b.size()のときは使っちゃダメ）
+
 ### Coming Soon
 
 - [属性構文(C++11)](https://cpprefjp.github.io/lang/cpp11/attributes.html)
