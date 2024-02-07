@@ -511,7 +511,7 @@ hoge({.a = 1, .b=2, .c=3})
 
 TBD
 
-## [std::copysign(C++11)](https://cpprefjp.github.io/reference/cmath/copysign.html)
+### [std::copysign(C++11)](https://cpprefjp.github.io/reference/cmath/copysign.html)
 
 地味だけど結構うれしいやつ．
 今まで，3項演算子やif文を使って符号判定してプラスマイナス反転させていた処理を簡潔に書くことができる．
@@ -520,7 +520,7 @@ auto value = std::copysign(<絶対値マン>, <符号マン>)
 ```
 
 
-## [std::exchange(C++14)](https://cpprefjp.github.io/reference/utility/exchange.html)
+### [std::exchange(C++14)](https://cpprefjp.github.io/reference/utility/exchange.html)
 
 値を書き換えて、書き換える前の値を返す。
 
@@ -538,7 +538,7 @@ std::cout << value << std::endl; // output: 2
 ```
 
 
-## [std::swap(C++11)](https://cpprefjp.github.io/reference/utility/swap.html)
+### [std::swap(C++11)](https://cpprefjp.github.io/reference/utility/swap.html)
 
 2つの値を入れ替えるswap動作を行う。配列に対しても使える。
 
@@ -563,7 +563,7 @@ int a,b;
 a = std::exchange(b,a);
 ```
 
-## [std::partition(C++03)](https://cpprefjp.github.io/reference/algorithm/partition.html)
+### [std::partition(C++03)](https://cpprefjp.github.io/reference/algorithm/partition.html)
 
 条件を表す関数オブジェクトを指定して、条件を満たす（関数がtrueを返す）要素をコンテナの前の方へ、条件を満たさないものを後ろに集める。
 
