@@ -23,14 +23,14 @@ copyright: "Copyright &copy; 2022 HansRobo"
 plugins:
   - search
   - git-revision-date-localized
-    type: iso_datetime
-    timezone: Asia/Tokyo
-    locale: ja
-    fallback_to_build_date: false
-    enable_creation_date: true
-    enabled: true
-    strict: true
-    fallback_to_build_date: true
+      type: iso_datetime
+      timezone: Asia/Tokyo
+      locale: ja
+      fallback_to_build_date: false
+      enable_creation_date: true
+      enabled: true
+      strict: true
+      fallback_to_build_date: true
   - tags
 
 # Extensions
