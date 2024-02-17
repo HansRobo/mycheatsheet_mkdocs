@@ -22,7 +22,7 @@ extra:
 copyright: "Copyright &copy; 2022 HansRobo"
 plugins:
   - search
-  - git-revision-date-localized
+  - git-revision-date-localized:
       type: iso_datetime
       timezone: Asia/Tokyo
       locale: ja
@@ -30,7 +30,6 @@ plugins:
       enable_creation_date: true
       enabled: true
       strict: true
-      fallback_to_build_date: true
   - tags
 
 # Extensions
