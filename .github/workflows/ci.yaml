@@ -8,10 +8,10 @@ jobs:
   deploy:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
-      - uses: actions/setup-python@v2
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v4
         with:
           python-version: 3.x
-      - run: pip install mkdocs mkdocs-material pymdown-extensions fontawesome_markdown markdown python-markdown-math plantuml-markdown mkdocs-codeinclude-plugin mkdocs-git-revision-date-localized-plugin mdx_truly_sane_lists neoteroi-mkdocs
+      - run: pip install -r ./requirements.txt
       - run: mkdocs gh-deploy --force
 
