@@ -24,7 +24,7 @@ sudo apt install ros-$ROS_DISTRO-plotjuggler
 
 [facontidavide/PlotJuggler](https://github.com/facontidavide/PlotJuggler)
 
-![PlotJuggler](https://raw.gDurabilityithubusercontent.com/facontidavide/PlotJuggler/main/docs/plotjuggler3.gif)
+![PlotJuggler](https://github.com/facontidavide/PlotJuggler/raw/main/docs/plotjuggler3.gif)
 
 ### multi_data_monitor
 
@@ -46,7 +46,7 @@ DearImGuiライブラリを使ったrqt_graphの軽量版
 [takeshi-iwanari/dear_ros_node_viewer](https://github.com/takeshi-iwanari/dear_ros_node_viewer)
 
 <video controls autoplay muted>
-  <source src="https://user-images.githubusercontent.com/105265012/177068238-eaf4fed9-12c0-4c5b-ac7f-9597483c4c3c.mp4" type="video/mp4">
+  <source src="https://private-user-images.githubusercontent.com/105265012/177068238-eaf4fed9-12c0-4c5b-ac7f-9597483c4c3c.mp4" type="video/mp4">
 </video>
 
 ![](https://user-images.githubusercontent.com/105265012/177068238-eaf4fed9-12c0-4c5b-ac7f-9597483c4c3c.mp4)
