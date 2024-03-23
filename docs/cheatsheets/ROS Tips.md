@@ -8,9 +8,9 @@ weight: -10
 intro: ROS Tips
 ---
 
-- ## vcstool
+## vcstool
   
-  OSRFでROS 2プロジェクトを引っ張ってきたDirk Thomas氏によって作られたメタリポジトリなどでのvcs操作をかんたんにするツール．
+ OSRFでROS 2プロジェクトを引っ張ってきたDirk Thomas氏によって作られたメタリポジトリなどでのvcs操作をかんたんにするツール．
   ただし，氏がNVIDIAに移籍してからは氏の対応が極端に遅くなり，IssueやPullRequestでは氏へ数多の”Friendly Ping”が送られているがそのほとんどは返信がない．  
   
   ROSコミュニティの中核の一つをなすこのツールがフリーズする状況は芳しくないため，  
@@ -39,6 +39,7 @@ intro: ROS Tips
 - ### 公式ツール・パッケージの置き場所
   
   複数オーガナイゼーションに別れて配置されているので忘れやすいのでメモ
+  
 - [colcon · GitHub](https://github.com/colcon)
 	- colcon本体，プラグイン
 - [ROS core stacks · GitHub](https://github.com/ros)
@@ -81,14 +82,17 @@ intro: ROS Tips
 		- リリースリポジトリ置き場
 	- [ros-visualization · GitHub](https://github.com/ros-visualization)
 		- Rviz, Rqt関連
-- ### `ros2 run`と一緒にパラメータを指定する
+
+### `ros2 run`と一緒にパラメータを指定する
   
   ```bash
   ros2 run ros_packages executable --ros-args -p <parameter_name>:=<parameter_value>
   ```
   
   参考：[URL](https://docs.ros.org/en/galactic/How-To-Guides/Node-arguments.html#setting-parameters-directly-from-the-command-line)
-- ## 存在するかわからないパッケージを扱いながらament_cmake_autoを使う
+
+## 存在するかわからないパッケージを扱いながらament_cmake_autoを使う
+
   
   ```CMake
   find_package(ament_cmake_auto REQUIRED)  
@@ -108,52 +112,63 @@ intro: ROS Tips
   list(APPEND ${PROJECT_NAME}_FOUND_LIBRARIES ${<pkg_name>_LIBRARIES})  
   endif()
   ```
-- ### package.xmlの<depend>に書けるconditionで使える変数
+
+### package.xmlの/<depend/>に書けるconditionで使える変数
   
-  [REP 149 -- Package Manifest Format Three Specification (ROS.org)](https://www.ros.org/reps/rep-0149.html#build-depend-multiple:~:text=condition%3D%22CONDITION_EXPRESSION%22,1%22%3Eroscpp%3C/depend%3E)
+[REP 149 -- Package Manifest Format Three Specification (ROS.org)](https://www.ros.org/reps/rep-0149.html#build-depend-multiple:~:text=condition%3D%22CONDITION_EXPRESSION%22,1%22%3Eroscpp%3C/depend%3E)
   
-  基本，環境変数だけ
-  
-  [rosdep/rospkg_loader.py L146](https://github.com/ros-infrastructure/rosdep/blob/master/src/rosdep2/rospkg_loader.py#L146)
-  contextとして環境変数をぶち込んでいる．逆にこれ以外のコンテキストは存在しない
-  
-  ```python
-  pkg.evaluate_conditions(os.environ)
-  ```
-  
-  [catkin\_pkg/condition.py L47](https://github.com/ros-infrastructure/catkin_pkg/blob/master/src/catkin_pkg/condition.py#L47)
-  `$`付き文字が抽出されて...
-  
-  ```python
-  identifier = pp.Word('$', pp.alphanums + '_', min=2).setName('identifier')
-  ```
-  
-  [catkin\_pkg/condition.py L102-103](https://github.com/ros-infrastructure/catkin_pkg/blob/master/src/catkin_pkg/condition.py#L102-L103)
-  コンテキストで解決される
-  
-  ```python
-  def __call__(self, context):
-    return str(context.get(self.value[1:], ''))
-  ```
-- ## MPPIメモ
-- ### Critic
-- #### Constraint Critic
+基本，環境変数だけ
+
+[rosdep/rospkg_loader.py L146](https://github.com/ros-infrastructure/rosdep/blob/master/src/rosdep2/rospkg_loader.py#L146)
+contextとして環境変数をぶち込んでいる．逆にこれ以外のコンテキストは存在しない
+
+```python
+pkg.evaluate_conditions(os.environ)
+```
+
+[catkin\_pkg/condition.py L47](https://github.com/ros-infrastructure/catkin_pkg/blob/master/src/catkin_pkg/condition.py#L47)
+`$`付き文字が抽出されて...
+
+```python
+identifier = pp.Word('$', pp.alphanums + '_', min=2).setName('identifier')
+```
+
+[catkin\_pkg/condition.py L102-103](https://github.com/ros-infrastructure/catkin_pkg/blob/master/src/catkin_pkg/condition.py#L102-L103)
+コンテキストで解決される
+
+```python
+def __call__(self, context):
+return str(context.get(self.value[1:], ''))
+```
+
+
+## MPPIメモ
+
+### **Critic**
+
+#### Constraint Critic
 - 最大速度を超えている部分をペナルティに追加
 - 最低速度を下回っている部分をペナルティに追加
-- #### Cost Critic
+
+#### Cost Critic
 - 衝突計算をして衝突したら大きなペナルティを入れる
 - waypointごとのコストの平均
-- #### Goal Angle Critic
+
+#### Goal Angle Critic
 - ゴールの近くに来たとき角度が合っていないと低評価
 - ゴール近くに来ると、ゴール角度と各Waypointの角度の差の絶対値平均を取って、重み係数をかけてべき乗係数分べき乗される
-- #### Goal Critic
+
+#### Goal Critic
 - ゴール付近に来たときに各Waypointとゴール座標の差分の平均をとってコストとする
-- #### Obstacle Critic
+
+#### Obstacle Critic
 - waypointごとに障害物やインフレーション層からコストを計算する
 - コストを全部足し合わせる
 - 長さで割って正規化
-- #### Path Align Critic
+
+#### Path Align Critic
 - ゴール付近では使わない（代わりにGoal Criticが使われる）
 - 動的障害物がパスとかなり重なっているときはコストを足さない
 - それぞれのwaipointについての参照パスの最近傍点との距離の平均をコストとする
-- #### Path Angle Critic
+
+#### Path Angle Critic
