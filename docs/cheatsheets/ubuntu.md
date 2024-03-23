@@ -149,3 +149,13 @@ sudo apt install pulseeffects
 ## mkdocsで箇条書きのインデントが消える
 
 [MkDocs でスペース2個のインデントをリストのネストとして認識させたい場合 - stamemo](https://stakiran.hatenablog.com/entry/2018/08/02/202816)
+
+## AppImageをインストールする
+
+ポータブルでどこでも開けるAppImageだが、特にUbuntuではユーザーが実行ファイルの場所を管理しないといけないので常用する場合はちょっと面倒である。
+
+そんな時に便利なのが、AppImage Launcher。
+これを使えば、他のインストールしたソフトと同じようにSuperキーを押すと出てくる検索画面に出てきたり、タスクバーのお気に入りに登録できるようにしてくれる。
+具体的には、AppImageの初回起動時にセットアップ画面が出てくるのでOK連打するだけ。
+
+[Releases · TheAssassin/AppImageLauncher](https://github.com/TheAssassin/AppImageLauncher/releases)
