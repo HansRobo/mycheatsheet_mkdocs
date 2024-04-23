@@ -11,14 +11,14 @@ intro: ament_cmake_auto
 
 ## ament_auto_add_library
 
-- 引数
-	- 【bool】NO_TARGET_LINK_LIBRARIES
-	- 【bool】EXCLUDE_FROM_ALL
-	- 【bool】MODULE
-	- 【bool】SHARED
-	- 【bool】STATIC
-	- DIRECTORY
-		- ここにあるソースファイルはすべてビルド対象に
+- 引数  
+	- 【bool】NO_TARGET_LINK_LIBRARIES  
+	- 【bool】EXCLUDE_FROM_ALL  
+	- 【bool】MODULE  
+	- 【bool】SHARED  
+	- 【bool】STATIC  
+	- DIRECTORY  
+		- ここにあるソースファイルはすべてビルド対象に  
 	- target
 - やること
 	- add_library
