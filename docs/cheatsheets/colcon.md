@@ -29,3 +29,20 @@ intro: colcon
 | `--cmake-args <CMakeに渡す引数>`   | CMakeに渡す引数を指定する              |
 | `--parallel-workers <number>` | 最大の並列数を指定する                  |
 | `--cmake-clean-first`         | クリーンビルドする                    |
+
+### colcon-ros-buildfarm
+
+```bash
+mkdir -p colcon_buildfarm_ws/src
+cd colcon_buildfarm_ws
+wget https://raw.githubusercontent.com/HansRobo/colcon-ros-buildfarm/refs/heads/devel/crb.repos
+source /opt/ros/humble/setup.bash
+vcs import src < crb.repos
+colcon build
+source insatll/setup.bash
+ros_buildfarm release
+```
+
+#### 注意
+- symlink-installするとビルドが通らない？
+- 現状、ros_buildfarm releaseしてもうまく動かないっぽい？
