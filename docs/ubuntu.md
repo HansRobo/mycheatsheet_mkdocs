@@ -1,4 +1,4 @@
-[---
+---
 title: ubuntu
 category: Ubuntu
 layout: 2017/sheet
