@@ -170,4 +170,3 @@ sudo apt install pulseeffects
 以後、AppImageファイルを実行すると以下のような画面が出てくるので、「Integrate and run」を選択すればインストールを行ってくれるようになる。
 
 <img src="../public_images/Screenshot from 2024-12-12 20-57-04.png" width="50%"/>
-]()
