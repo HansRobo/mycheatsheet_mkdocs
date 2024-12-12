@@ -13,8 +13,6 @@ jobs:
         with:
           python-version: 3.x
       - uses: abatilo/actions-poetry@v3
-        with:
-          poetry-version: 2.12
       - run: poetry install --no-interaction
       - run: poetry run mkdocs gh-deploy --force
 
