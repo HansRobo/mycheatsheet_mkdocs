@@ -42,7 +42,7 @@ deb [arch=amd64 signed-by=/usr/local/share/keyrings/google.gpg] http://dl.google
 `/etc/default/keyboard`を編集して以下の一行を追加する
 
 ```/etc/default/keyboard
-XKBOPTIONS="menu:nocaps"`
+XKBOPTIONS="menu:nocaps"
 ```
 
 編集が終了したら再起動
@@ -135,6 +135,7 @@ sudo sysctl -p
 ```
 
 ## イコライザを使う
+
 PulseEffectsというのが便利
 ```bash
 sudo apt install lsp-plugins-lv2
@@ -142,8 +143,9 @@ sudo apt install pulseeffects
 ```
 
 エフェクトの中でも応答関数をいじる（？）Convolverというのが良い
-[EasyEffects-Presets/Dolby ATMOS ((128K MP3)) 1.Default.irs at master · JackHack96/EasyEffects-Presets · GitHub](https://github.com/JackHack96/EasyEffects-Presets/blob/master/irs/Dolby%20ATMOS%20((128K%20MP3))%201.Default.irs)
-このDolby ATOMOSを名乗っているプリセットが好み
+
+[EasyEffects-Presets/Dolby ATMOS ((128K MP3)) 1.Default.irs at master · JackHack96/EasyEffects-Presets · GitHub](https://github.com/JackHack96/EasyEffects-Presets/blob/master/irs/Dolby%20ATMOS%20((128K%20MP3))
+個人的には↑のDolby ATOMOSを名乗っているプリセットが好み
 
 
 ## mkdocsで箇条書きのインデントが消える
