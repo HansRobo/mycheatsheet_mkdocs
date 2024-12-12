@@ -1,4 +1,4 @@
----
+[---
 title: ubuntu
 category: Ubuntu
 layout: 2017/sheet
@@ -164,9 +164,10 @@ sudo apt install pulseeffects
 インストール直後に実行するとAppImageのデフォルト格納場所を決めるウィザードが出てくる。
 基本的にデフォルト（~/Applications）で問題ない。
 
-![[../public_images/Screenshot from 2024-12-12 20-56-51.png]]
+<img src="../public_images/Screenshot from 2024-12-12 20-56-51.png" width="50%"/>
 
 
 以後、AppImageファイルを実行すると以下のような画面が出てくるので、「Integrate and run」を選択すればインストールを行ってくれるようになる。
 
-![[../public_images/Screenshot from 2024-12-12 20-57-04.png]]
+<img src="../public_images/Screenshot from 2024-12-12 20-57-04.png" width="50%"/>
+]()
