@@ -159,3 +159,10 @@ sudo apt install pulseeffects
 具体的には、AppImageの初回起動時にセットアップ画面が出てくるのでOK連打するだけ。
 
 [Releases · TheAssassin/AppImageLauncher](https://github.com/TheAssassin/AppImageLauncher/releases)
+
+インストール直後に実行するとAppImageのデフォルト格納場所を決めるウィザードが出てくる。
+基本的にデフォルト（~/Applications）で問題ない。
+![[Screenshot from 2024-12-12 20-56-51.png]]
+
+以後、AppImageファイルを実行すると以下のような画面が出てくるので、「Integrate and run」を選択すればインストールを行ってくれるようになる。
+![[Screenshot from 2024-12-12 20-57-04.png]]
