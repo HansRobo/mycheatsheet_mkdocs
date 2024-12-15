@@ -170,3 +170,37 @@ sudo apt install pulseeffects
 以後、AppImageファイルを実行すると以下のような画面が出てくるので、「Integrate and run」を選択すればインストールを行ってくれるようになる。
 
 <img src="../public_images/Screenshot from 2024-12-12 20-57-04.png" width="50%"/>
+
+
+## MarkItDown
+
+全てをMarkdownにするツール
+
+### インストール
+
+```bash
+pipx install git+https://github.com/microsoft/markitdown.git
+```
+
+### YouTube
+
+コマンド例
+```bash
+markitdown https://youtu.be/nuQvDqgdzMg
+```
+
+出力例
+```markdown
+# YouTube
+
+## Choreonoid ROS2 Demo
+
+### Video Metadata
+- **Views:** 57
+- **Keywords:** 動画,ビデオ,共有,カメラ付き携帯電話,動画機能付き携帯電話,無料,アップロード,チャンネル,コミュニティ,YouTube,ユーチューブ
+- **Runtime:** PT0M28S
+
+### Description
+ROSJPのLTで発表したときに使用したデモ動画です。
+```
+
