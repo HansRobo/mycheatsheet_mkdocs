@@ -1,4 +1,3 @@
-
 ---
 title: ansible
 category: Tool

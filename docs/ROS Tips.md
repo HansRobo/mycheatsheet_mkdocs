@@ -17,9 +17,10 @@ intro: ROS Tips
   Steven! Ragnarök氏のフォークやvcstools2を作るものも現れている  
   
   参考：
-  [Status of vcstool · Issue #242 · dirk-thomas/vcstool · GitHub](https://github.com/dirk-thomas/vcstool/issues/242)  
-  [GitHub - MaxandreOgeret/vcstool2: Vcstool2 is an attempt at continuing development of vcstool, a command line tool designed to make working with multiple repositories easier.](https://github.com/MaxandreOgeret/vcstool2/)
-- ## ROS パッケージを debianパッケージ化したい
+  - [Status of vcstool · Issue #242 · dirk-thomas/vcstool · GitHub](https://github.com/dirk-thomas/vcstool/issues/242)  
+  - [GitHub - MaxandreOgeret/vcstool2: Vcstool2 is an attempt at continuing development of vcstool, a command line tool designed to make working with multiple repositories easier.](https://github.com/MaxandreOgeret/vcstool2/)
+
+## ROS パッケージを debianパッケージ化したい
   
   GitHub Actionが提供されている
   [jspricke/ros-deb-builder-action](https://github.com/jspricke/ros-deb-builder-action)
@@ -36,52 +37,53 @@ intro: ROS Tips
   
   MoveIt2でも使われている他，Autowareでも試用されている
   [Network Dependents · jspricke/ros-deb-builder-action · GitHub](https://github.com/jspricke/ros-deb-builder-action/network/dependents)
-- ### 公式ツール・パッケージの置き場所
+
+### 公式ツール・パッケージの置き場所
   
   複数オーガナイゼーションに別れて配置されているので忘れやすいのでメモ
   
 - [colcon · GitHub](https://github.com/colcon)
-	- colcon本体，プラグイン
+    - colcon本体，プラグイン
 - [ROS core stacks · GitHub](https://github.com/ros)
-	- ROS1のものも多いが，rosdistroなどROS2でも共通で使えるものはここにあることが多い
-	- [ros/rosdistro](https://github.com/ros/rosdistro)
-		- rosdepの依存解決・aptへの反映のときに参照されるリポジトリ
-		- 見どころ
-			- 基本：各distroのフォルダの `distribution.yaml`
-			- 一般的なライブラリ：`rosdep/base.yaml`
-			- pipライブラリ：`rosdep/python.yaml`
+    - ROS1のものも多いが，rosdistroなどROS2でも共通で使えるものはここにあることが多い
+    - [ros/rosdistro](https://github.com/ros/rosdistro)
+        - rosdepの依存解決・aptへの反映のときに参照されるリポジトリ
+        - 見どころ
+            - 基本：各distroのフォルダの `distribution.yaml`
+            - 一般的なライブラリ：`rosdep/base.yaml`
+            - pipライブラリ：`rosdep/python.yaml`
 - [ROS 2 · GitHub](https://github.com/ros2)
-	- ROS2関連はまずここを見る
-	- [ros2/ros2cli](https://github.com/ros2/ros2cli)
-		- `ros2 <verb>`コマンド
-	- [ros2/rclcpp](https://github.com/ros2/rclcpp)
-	- サンプル系（demosのほうがサンプルが豊富）
-		- [ros2/examples](https://github.com/ros2/examples)
-		- [ros2/demos](https://github.com/ros2/demos)
+    - ROS2関連はまずここを見る
+    - [ros2/ros2cli](https://github.com/ros2/ros2cli)
+        - `ros2 <verb>`コマンド
+    - [ros2/rclcpp](https://github.com/ros2/rclcpp)
+    - サンプル系（demosのほうがサンプルが豊富）
+        - [ros2/examples](https://github.com/ros2/examples)
+        - [ros2/demos](https://github.com/ros2/demos)
 - [ament · GitHub](https://github.com/ament)
-	- [ament/ament\_cmake](https://github.com/ament/ament_cmake)
-		- ament_cmake_auto
-		- ament_cmake_core
-	- [ament/ament\_lint](https://github.com/ament/ament_lint)
+    - [ament/ament\_cmake](https://github.com/ament/ament_cmake)
+        - ament_cmake_auto
+        - ament_cmake_core
+    - [ament/ament\_lint](https://github.com/ament/ament_lint)
 - [ros-infrastructure · GitHub](https://github.com/ros-infrastructure)
-	- [ros-infrastructure/rep](https://github.com/ros-infrastructure/rep)
-	- [ros-infrastructure/rosdep](https://github.com/ros-infrastructure/rosdep)
-	- [ros-infrastructure/ros\_buildfarm](https://github.com/ros-infrastructure/ros_buildfarm)
+    - [ros-infrastructure/rep](https://github.com/ros-infrastructure/rep)
+    - [ros-infrastructure/rosdep](https://github.com/ros-infrastructure/rosdep)
+    - [ros-infrastructure/ros\_buildfarm](https://github.com/ros-infrastructure/ros_buildfarm)
 - [Open Robotics · GitHub](https://github.com/osrf)
-	- [osrf/docker\_images](https://github.com/osrf/docker_images)
-	- [osrf/rocker](https://github.com/osrf/rocker)
+    - [osrf/docker\_images](https://github.com/osrf/docker_images)
+    - [osrf/rocker](https://github.com/osrf/rocker)
 - その他
-	- [ROS 2 Tooling Working Group · GitHub](https://github.com/ros-tooling)
-		- CIなど
-		- [ros-tooling/topic\_tools](https://github.com/ros-tooling/topic_tools)
-	- [ROS Planning · GitHub](https://github.com/ros-planning)
-		- Navigation, MoveItなど
-		- [ros-planning/navigation2](https://github.com/ros-planning/navigation2)
-		- [ros-planning/moveit2](https://github.com/ros-planning/moveit2)
-	- [ROS 2 release repositories · GitHub](https://github.com/ros2-gbp)
-		- リリースリポジトリ置き場
-	- [ros-visualization · GitHub](https://github.com/ros-visualization)
-		- Rviz, Rqt関連
+    - [ROS 2 Tooling Working Group · GitHub](https://github.com/ros-tooling)
+        - CIなど
+        - [ros-tooling/topic\_tools](https://github.com/ros-tooling/topic_tools)
+    - [ROS Planning · GitHub](https://github.com/ros-planning)
+        - Navigation, MoveItなど
+        - [ros-planning/navigation2](https://github.com/ros-planning/navigation2)
+        - [ros-planning/moveit2](https://github.com/ros-planning/moveit2)
+    - [ROS 2 release repositories · GitHub](https://github.com/ros2-gbp)
+        - リリースリポジトリ置き場
+    - [ros-visualization · GitHub](https://github.com/ros-visualization)
+        - Rviz, Rqt関連
 
 ### `ros2 run`と一緒にパラメータを指定する
   
