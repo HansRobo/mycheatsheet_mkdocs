@@ -48,7 +48,6 @@ intro: おすすめGNOME拡張機能
 
 ![screenshot](https://extensions.gnome.org/extension-data/screenshots/screenshot_4472.png)
 
-
 ### Extension Sync
 
 GitHubのgist経由でGNOME拡張機能の設定ファイルを同期できるプラグイン  
@@ -57,9 +56,10 @@ GitHubのgist経由でGNOME拡張機能の設定ファイルを同期できる�
 現在、Ubuntu24.04では使えないので残念
 
 同期するには設定で以下の2点が必要  
+
 - GitHub GistのID  
-	- 初めての場合[ここ](https://gist.github.com/)から作る  
-	- 入力するのは`https://gist.github.com/username/XXXXX`の`XXXX`  
+  - 初めての場合[ここ](https://gist.github.com/)から作る  
+  - 入力するのは`https://gist.github.com/username/XXXXX`の`XXXX`  
 - GitHubのパーソナルアクセストークン  
 ![](https://camo.githubusercontent.com/4c0e0828590709add17450112c0e65a9b053f7aef2f6c24df274c3ff263404ae/68747470733a2f2f692e696d6775722e636f6d2f345376334a75732e706e67)
 
@@ -70,7 +70,6 @@ GitHubのgist経由でGNOME拡張機能の設定ファイルを同期できる�
 
 ![](https://extensions.gnome.org/extension-data/screenshots/screenshot_4548_Xf0qiGj.gif)
 
-
 ### Clipboard Indicator
 
 [Clipboard Indicator - GNOME Shell Extensions](https://extensions.gnome.org/extension/779/clipboard-indicator/)
@@ -78,7 +77,6 @@ GitHubのgist経由でGNOME拡張機能の設定ファイルを同期できる�
 クリップボードマネージャ
 
 ![](https://extensions.gnome.org/extension-data/screenshots/screenshot_779_GiNDiJq.png)
-
 
 ### TopHat
 

@@ -11,22 +11,20 @@ intro: ROS News
 
 ## `qos_event`から`event_handler`への以降
 
-
-
 ### `rclcpp::spin_until_timeout`関数の追加
 
 テストを書く時に便利に使えそう  
 
 ```c++
-void spin_until_timeout(rclcpp::node_interfaces::NodeBaseInterface::SharedPtr node_ptr, 
+void spin_until_timeout(rclcpp::node_interfaces::NodeBaseInterface::SharedPtr node_ptr,
                         std::chrono::duration< TimeRepT, TimeT > timeout)
 ```
 
 - [提案Issue](https://github.com/ros2/rclcpp/issues/1821)
 - [PullRequest #1874](https://github.com/ros2/rclcpp/pull/1874)
-	- 2022/01/24に`rolling`にマージ
+  - 2022/01/24に`rolling`にマージ
 - [デグレ発覚によりリバート #1956](https://github.com/ros2/rclcpp/pull/1956)
-	- 2022/01/25
+  - 2022/01/25
 - [現在再マージに向けて調整中 #1957](https://github.com/ros2/rclcpp/pull/1957)
 
 ### `ros2 interface package` にフィルターのオプション追加
@@ -34,10 +32,12 @@ void spin_until_timeout(rclcpp::node_interfaces::NodeBaseInterface::SharedPtr no
 [Add interface type filters to ros2 interface package by DLu · Pull Request #765 · ros2/ros2cli · GitHub](https://github.com/ros2/ros2cli/pull/765)
 
 以下のようにズラッとでてくるのをフィルターするため以下のオプションが追加される
+
 - `--only-msgs`
 - `--only-srvs`
 - `--only-actions`
-- 
+-
+
 ```shell
 hans@hans$ ros2 interface package std_msgs
 std_msgs/msg/Char
@@ -60,7 +60,7 @@ Nodeクラスのインタフェースは適切に分離されて提供されて�
 create_service(
   std::shared_ptr<node_interfaces::NodeBaseInterface> node_base,
   std::shared_ptr<node_interfaces::NodeServicesInterface> node_services,
-  
+
 auto service = create_service(
   my_node_class->get_node_base_interface(),
   my_node_class->get_node_services_interface(),
@@ -80,7 +80,6 @@ auto service = create_service(
   // ...
 ```
 
-
 ### `ros2 topic echo`での `--timeout <sec>`オプション
-[Adds a timeout feature to rostopic echo by arjo129 · Pull Request #792 · ros2/ros2cli · GitHub](https://github.com/ros2/ros2cli/pull/792)
 
+[Adds a timeout feature to rostopic echo by arjo129 · Pull Request #792 · ros2/ros2cli · GitHub](https://github.com/ros2/ros2cli/pull/792)

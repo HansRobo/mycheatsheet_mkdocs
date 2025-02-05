@@ -12,6 +12,7 @@ intro: ansible
 ## インストール方法
 
 [autoware/setup-dev-env.sh at main · autowarefoundation/autoware · GitHub](https://github.com/autowarefoundation/autoware/blob/main/setup-dev-env.sh#L123-L126)
+
 ```bash
 python3 -m pipx ensurepath
 export PATH="${PIPX_BIN_DIR:=$HOME/.local/bin}:$PATH"
@@ -31,6 +32,7 @@ pipx install --include-deps --force "ansible==6.*"
 `filename`を指定しない場合，`repo`のURLからいい感じに書き込み先が生成される．
 
 例：
+
 - `repo` : `deb https://repo.vivaldi.com/archive/deb/ stable main`
 - 生成される書き込み先：`repo_vivaldi_com_archive_deb.list`
 
@@ -45,14 +47,13 @@ Target Packages (main/binary-amd64/Packages) is configured multiple times in /et
 
 ```ansible
 - name: add ppa to source list
-	apt_repository:
-		repo: "deb https://repo.vivaldi.com/archive/deb/ stable main"
-		state: present
-		update_cache: true
-		filename: vivaldi
-	become: true
+ apt_repository:
+  repo: "deb https://repo.vivaldi.com/archive/deb/ stable main"
+  state: present
+  update_cache: true
+  filename: vivaldi
+ become: true
 ```
-
 
 ### 変数名にハイフンを使ってはいけない
 
@@ -60,9 +61,9 @@ Target Packages (main/binary-amd64/Packages) is configured multiple times in /et
 
 ```ansible
 - name: check gnome-terminal
-	stat:
-		path: /usr/bin/gnome-terminal
-	register: gnome-terminal-stat
+ stat:
+  path: /usr/bin/gnome-terminal
+ register: gnome-terminal-stat
 ```
 
 エラー

@@ -22,8 +22,6 @@ if( Boost_FOUND )
 endif()
 ```
 
-
-
 ### cmakeの関数の引数
 
 #### 基礎
@@ -33,25 +31,25 @@ endif()
 
 ```cmake
 function(関数名 引数名1 引数名2)
-	message("ARG1 = ${引数名1}")
-	message("ARG2 = ${引数名2}")
-	message("ARGN = ${ARGN}") 
+ message("ARG1 = ${引数名1}")
+ message("ARG2 = ${引数名2}")
+ message("ARGN = ${ARGN}")
 endfunction()
 ```
 
 #### パース
 
-```cmake　　　　　　　　　　
+```cmake
 cmake_parse_arguments(
-	MYFUNC 　　　       # 変数のプレフィックス
-	"BOOL_VAR"         # 真偽値をとる変数の名前
-	"VAR1;VAR2"        # 値を1つだけとる変数の名前
-	"MULTIPLE_OUTPUT"  # 値を複数とる変数の名前
-	${ARGN}　　　　　　　# パース元
+ MYFUNC 　　　       # 変数のプレフィックス
+ "BOOL_VAR"         # 真偽値をとる変数の名前
+ "VAR1;VAR2"        # 値を1つだけとる変数の名前
+ "MULTIPLE_OUTPUT"  # 値を複数とる変数の名前
+ ${ARGN}　　　　　　　# パース元
 )
 ```
 
 - 変数はセミコロン区切りで複数指定可能
 - CMakeには名前空間がないのでプレフィックスをつけることで名前の衝突を回避
-	- 今回は`MYFUNC_VAR1`とかになる
+  - 今回は`MYFUNC_VAR1`とかになる
 - パースされなかったものは`PREFIX_UNPARSED_ARGUMENTS`に詰められる

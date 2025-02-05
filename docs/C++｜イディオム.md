@@ -29,4 +29,3 @@ intro: C++｜便利イディオム
 ### Type Erasure
 
 [More C++ Idioms(English version)](https://en.wikibooks.org/wiki/More_C++_Idioms/Type_Erasure)
-

@@ -16,8 +16,6 @@ sudo pro attach <token>
 
 ## リアルタイムカーネル
 
-
-
 ```bash
 sudo pro enable realtime-kernel
 ```

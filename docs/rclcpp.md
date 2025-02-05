@@ -14,11 +14,11 @@ bool bool_param = node.get_parameter("bool_param").as_bool();
 // その2
 rclcpp::Parameter parameter;
 if(node.get_parameter("any_type_param", parameter)){
-	std::cout << "get any type parameter" << std::endl;
+ std::cout << "get any type parameter" << std::endl;
 }
 // その3
 if(get_parameter<bool>("bool_param", bool_param)){
-	std::cout << "get bool parameter: " << bool_param << std::endl;
+ std::cout << "get bool parameter: " << bool_param << std::endl;
 }
 ```
 
@@ -32,6 +32,7 @@ rclcpp::Parameter get_parameter(const std::string & name) const
 存在しないパラメータに対しては `rclcpp::exceptions::ParameterNotDeclaredException`を送出する。
 
 ##### その2
+
 ```
 bool get_parameter(const std::string & name, rclcpp::Parameter & parameter) const
 ```
@@ -52,7 +53,9 @@ bool get_parameter(const std::string & name, ParameterT & parameter) const
 テンプレートで指定したパラメータ型と取得しようとしているパラメータの型が異なる場合、`rclcpp::ParameterTypeException`を送出する。  
 
 #### get_parameter_or
+
 ##### その1
+
 ```
 template<typename ParameterT>
 bool
@@ -78,4 +81,3 @@ get_parameter_or(
 ```
 
 4のラッパーになっていて、パラメータを参照ではなく返り値で返してくれる。
-

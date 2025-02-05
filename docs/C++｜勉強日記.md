@@ -374,7 +374,7 @@ enum class [[maybe_unused]] E {
   B
 };
 ```
-  
+
 関数の引数の場合，maybe_unusedを指定せずとも，引数名を定義しないことで警告を抑制できる．  
 
 ```cpp

@@ -7,25 +7,23 @@ created: 2024-02-23 10:24:46
 
 rclcpp::initではこのデフォルトコンテキストを初期化している。
 
-
 ## オリジナル Contextを使ったROS 2プログラミング
 
 rclcpp::initはデフォルトContextをinitしているに過ぎないので、
 オリジナルContextしか使わない場合はContext::initさえしておけばrclcpp::initする必要はない
 
-
 ## CallbackGroup
 
 ## NodeOptions
-ノードに対応する設定
-- 
 
+ノードに対応する設定
+-
 
 ## InitOptions
 
 contextに対応する設定
-- domain IDがセットできる
 
+- domain IDがセットできる
 
 ## ExecutorOptions
 
