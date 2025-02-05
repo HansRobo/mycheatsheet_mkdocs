@@ -13,6 +13,8 @@ jobs:
         with:
           python-version: 3.x
       - uses: abatilo/actions-poetry@v3
+      - name: make package
+        run: mkdir -p src/mycheatsheet_mkdocs && touch src/mycheatsheet_mkdocs/__init__.py
       - run: poetry install --no-interaction
       - run: poetry run mkdocs gh-deploy --force
 
