@@ -15,7 +15,7 @@ intro: ROS Tips
   
   ROSコミュニティの中核の一つをなすこのツールがフリーズする状況は芳しくないため、Steven! Ragnarök氏のフォークやvcstools2を作るものも現れている。
   
-  ### 参考
+### 参考
   
   - [Status of vcstool · Issue #242 · dirk-thomas/vcstool · GitHub](https://github.com/dirk-thomas/vcstool/issues/242)  
   - [GitHub - MaxandreOgeret/vcstool2](https://github.com/MaxandreOgeret/vcstool2/)
@@ -96,7 +96,7 @@ intro: ROS Tips
 ## 存在するかわからないパッケージを扱いながらament_cmake_autoを使う
 
   
-  ```CMake
+  ```cmake
   find_package(ament_cmake_auto REQUIRED)  
   
   ament_auto_find_build_dependencies()  
