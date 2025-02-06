@@ -116,7 +116,7 @@ p.set_value(1);
 std::cout << f.get() << std::endl;
 ```
 
-`std::primise`は、データを渡す相手に「今はまだ空だけど、将来ここにデータを送るからね」と言って`std::future`を渡す。  
+`std::promise`は、データを渡す相手に「今はまだ空だけど、将来ここにデータを送るからね」と言って`std::future`を渡す。  
 後日、データを見つけたstd::promise`は`set_value`関数でデータを送り、`std::future`側では`get`関数で受けとれる。
 
 ### [委譲コンストラクタ(C++11)](https://cpprefjp.github.io/lang/cpp11/delegating_constructors.html)
@@ -141,7 +141,7 @@ std::vector<int> v1 = {1, 2, 3};
 std::vector<int> v2 {1, 2, 3};
 ```
 
-初期化子リストを使うには、`std::initilizer_list`を引数とするコンストラクタが必要'
+初期化子リストを使うには、`std::initializer_list`を引数とするコンストラクタが必要'
 
 ```cpp
 class MyVector {
@@ -311,9 +311,9 @@ if ( beginメンバ関数が存在 AND endメンバ関数が存在 ){
 - [carries_dependency(C++11)](https://cpprefjp.github.io/lang/cpp11/attributes.html#carries_dependency)
 - [deprecated(C++14)](https://cpprefjp.github.io/lang/cpp14/deprecated_attr.html)
 - [maybe_unused(C++17)](https://cpprefjp.github.io/lang/cpp17/maybe_unused.html)
-- [nodicard(C++17)](https://cpprefjp.github.io/lang/cpp17/nodiscard.html)
+- [nodiscard(C++17)](https://cpprefjp.github.io/lang/cpp17/nodiscard.html)
 - [fallthrough(c++17)](https://cpprefjp.github.io/lang/cpp17/fallthrough.html)
-- [no_unique_adress(c++20)](https://cpprefjp.github.io/lang/cpp20/language_support_for_empty_objects.html)
+- [no_unique_address(c++20)](https://cpprefjp.github.io/lang/cpp20/language_support_for_empty_objects.html)
 - [likely, unlikely (c++20)](https://cpprefjp.github.io/lang/cpp20/likely_and_unlikely_attributes.html)
 
 ### [noreturn属性(C++11)](https://cpprefjp.github.io/lang/cpp11/attributes.html#noreturn)
@@ -598,7 +598,7 @@ auto [a_pos, b_pos] = std::mismatch(a.begin(), a.end(), b.begin(), [](const int 
 
 - [属性構文(C++11)](https://cpprefjp.github.io/lang/cpp11/attributes.html)
   - [fallthrough(c++17)](https://cpprefjp.github.io/lang/cpp17/fallthrough.html)
-  - [no_unique_adress(c++20)](https://cpprefjp.github.io/lang/cpp20/language_support_for_empty_objects.html)
+  - [no_unique_address(c++20)](https://cpprefjp.github.io/lang/cpp20/language_support_for_empty_objects.html)
   - [likely, unlikely (c++20)](https://cpprefjp.github.io/lang/cpp20/likely_and_unlikely_attributes.html)
   - [属性の名前空間予約(c++20)](https://cpprefjp.github.io/lang/cpp20/reserving_attribute_namespaces_for_future_use.html)
 - [不明な属性を無視する(C++17)](https://cpprefjp.github.io/lang/cpp17/non_standard_attributes.html)
