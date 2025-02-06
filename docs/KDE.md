@@ -31,6 +31,8 @@ reboot
 
 ### KDEのWalletの無効化
 
+<!-- cspell:ignore kwallet kwalletrc -->
+
 KDE付属のパスワード管理ソフト「kwallet」
 
 ~/.config/kwalletrcに

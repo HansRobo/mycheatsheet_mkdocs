@@ -39,7 +39,7 @@ wget https://raw.githubusercontent.com/HansRobo/colcon-ros-buildfarm/refs/heads/
 source /opt/ros/humble/setup.bash
 vcs import src < crb.repos
 colcon build
-source insatll/setup.bash
+source install/setup.bash
 ros_buildfarm release
 ```
 

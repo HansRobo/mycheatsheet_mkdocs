@@ -21,22 +21,22 @@ pipx install --include-deps --force "ansible==6.*"
 
 ## yes/no ではなく true/false
 
-[よこち on Twitter: "ansbile のドキュメントにおけるにおける boolean は yes/no が遣われがちだったが、ansilbe-lint では true/false でないとエラーになる。どうしたもんでしょという issue。 https://t.co/dcNl9R83sl" / Twitter](https://twitter.com/akira6592/status/1554971476612501505)
+[よこち on Twitter: "ansible のドキュメントにおけるにおける boolean は yes/no が遣われがちだったが、ansible-lint では true/false でないとエラーになる。どうしたもんでしょという issue。 https://t.co/dcNl9R83sl" / Twitter](https://twitter.com/akira6592/status/1554971476612501505)
 
 [[Vote ended on 2022-08-03] Disconnect between Docs and Ansible-lint in regards to truthy statements (booleans) · Issue #116 · ansible-community/community-topics · GitHub](https://github.com/ansible-community/community-topics/issues/116)
 
-議論の結果，yes/noはやめてtrue/falseを使おうとなったようで，ドキュメントもtrue/falseで統一されるようになった
+議論の結果、yes/noはやめてtrue/falseを使おうとなったようで、ドキュメントもtrue/falseで統一されるようになった
 
 ## `apt_repository`の書き込み先
 
-`filename`を指定しない場合，`repo`のURLからいい感じに書き込み先が生成される．
+`filename`を指定しない場合、`repo`のURLからいい感じに書き込み先が生成される。
 
 例：
 
 - `repo` : `deb https://repo.vivaldi.com/archive/deb/ stable main`
 - 生成される書き込み先：`repo_vivaldi_com_archive_deb.list`
 
-ただ，こういったアプリはあとからアップデートなどで別に `vivaldi.list`などが追加され，
+ただ、こういったアプリはあとからアップデートなどで別に `vivaldi.list`などが追加され、
 `apt update`したときに
 
 ```bash

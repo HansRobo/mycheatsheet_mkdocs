@@ -19,6 +19,6 @@ intro: ROS Message
   - シリアライズ・デシリアライズ関数
 - xx\_\_struct.h/hpp
   - structの定義、equal/ not equal演算子の定義
-- xx\_\_traitshpp
+- xx\_\_traits.hpp
   - yamlへの変換関数の定義
 - xx\_\_type_support.h/hpp/c

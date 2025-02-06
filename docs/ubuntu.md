@@ -28,8 +28,8 @@ sudo apt install apt-fast
 
 ### 代替手段2：`/usr/local/share/keyrings/`に鍵を保存し，`source.list`で参照する
 
-`/etc/apt/trusted.gpg.d/`を使用する方法は `apt-key`の問題でもあった，追加した鍵が全てのリポジトリに対して適用されてしまうセキュリティ上の問題が解決されていない．
-以下のように`source.list`にて`signed-by`で鍵を指定することで問題は解決される．
+`/etc/apt/trusted.gpg.d/`を使用する方法は `apt-key`の問題でもあった、追加した鍵がすべてのリポジトリに対して適用されてしまうセキュリティ上の問題が解決されていない。
+以下のように`source.list`にて`signed-by`で鍵を指定することで問題は解決される。
 
 ```source.list
 deb [arch=amd64 signed-by=/usr/local/share/keyrings/google.gpg] http://dl.google.com/linux/chrome/deb/ stable main
@@ -65,16 +65,16 @@ aptのサブコマンドで似たような以下の3つのコマンドがある
 
 ### sudo apt upgrade
 
-sources.listで設定されたPPAなどの取得元から利用可能なアップグレードをインストールする．
+sources.listで設定されたPPAなどの取得元から利用可能なアップグレードをインストールする。
 
-アップグレードするパッケージに新たな依存関係が追加された場合，新しい依存パッケージが追加でインストールされるが，
+アップグレードするパッケージに新たな依存関係が追加された場合、新しい依存パッケージが追加でインストールされるが、
 **アップグレードの過程で何らかのパッケージの削除が必要となる場合，アップグレードは行われない**
 
 ### sudo apt-get dist-upgrade / full-upgrade
 
 **dist-upgradeとfull-upgradeは同様の機能**
 
-dist-upgradeはapt-getとの互換性の為に残されている気がする．
+dist-upgradeはapt-getとの互換性の為に残されている気がする。
 
 **upgradeとは違い，システム全体をアップグレードするためなら既存パッケージの削除を厭わない．**
 
@@ -96,7 +96,7 @@ slack -u
 
 ## シンボリックリンクコマンドの覚え方
 
-なぜか，覚えられない`ln -s`  
+なぜか、覚えられない`ln -s`  
 実は`cp`や`mv`コマンドとリンク元の登録名の並びが一緒！
 
 ```bash
@@ -104,6 +104,8 @@ ln -s リンク元 登録名
 ```
 
 ## XML -> YAMLの変換
+
+<!-- cspell:ignore ATOMOS libconfig markitdown  -->
 
 ```bash
 sudo apt install libxml-compile-perl libconfig-yaml-perl
@@ -127,7 +129,9 @@ rm -rf ~/.cache/pip
 
 ## ファイルの最大ウォッチ数を増やす
 
-  IDEをたくさん開き過ぎたときなど，OSのファイルウォッチ数が足りない時がある
+  IDEをたくさん開き過ぎたときなど、OSのファイルウォッチ数が足りない時がある
+
+<!-- cspell:ignore inotify stamemo -->
 
 ```bash
 sudo echo "fs.inotify.max_user_watches=524288" >> /etc/sysctl.conf
@@ -154,7 +158,7 @@ sudo apt install pulseeffects
 
 ## AppImageをインストールする
 
-ポータブルでどこでも開けるAppImageだが、特にUbuntuではユーザーが実行ファイルの場所を管理しないといけないので常用する場合はちょっと面倒である。
+ポータブルでどこでも開けるAppImageだが、とくにUbuntuではユーザーが実行ファイルの場所を管理しないといけないので常用する場合はちょっと面倒である。
 
 そんな時に便利なのが、AppImage Launcher。
 これを使えば、他のインストールしたソフトと同じようにSuperキーを押すと出てくる検索画面に出てきたり、タスクバーのお気に入りに登録できるようにしてくれる。
@@ -173,7 +177,7 @@ sudo apt install pulseeffects
 
 ## MarkItDown
 
-全てをMarkdownにするツール
+すべてをMarkdownにするツール
 
 ### インストール
 

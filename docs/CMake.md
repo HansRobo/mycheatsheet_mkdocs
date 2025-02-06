@@ -12,8 +12,8 @@ intro: CMake
 
 ### パッケージの探索結果で分岐する
 
-`find_package(pkg_name)`の結果は`pkg_name_FOUND`に出力されるのを利用する.
-REQUIRED指定すると見つからなかった場合にビルドエラーになっていしまうので注意
+`find_package(pkg_name)`の結果は`pkg_name_FOUND`に出力されるのを利用する。
+REQUIRED指定すると見つからなかった場合、ビルドエラーになっていしまうので注意
 
 ```CMakeLists.txt
 find_package(Boost)
@@ -26,7 +26,7 @@ endif()
 
 #### 基礎
 
-- 名前をつけた引数は`${引数名}`の形で関数内で参照可能
+- 名前をつけた引数は`${引数名}`の形で関数内参照可能
 - ↑からはみ出た引数は`${ARGN}`にセミコロン区切りで詰め込まれる
 
 ```cmake

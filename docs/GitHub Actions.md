@@ -11,7 +11,7 @@ intro: GitHub Actions
 ## ファイルを同期したい
 
 [Repo File Sync Action · Actions · GitHub Marketplace · GitHub](https://github.com/marketplace/actions/repo-file-sync-action)
-これを使う．同期するファイルは`sync.yaml`という設定ファイルで管理．
+これを使う。同期するファイルは`sync.yaml`という設定ファイルで管理。
 同期先のパスが変わってもOK
 
 ## ファイルの変更監視
@@ -27,11 +27,13 @@ pull_request
 
 - 同時に両方使えない
 - pathsでは！が使える
-  - paths-ignoreで書けてpathsで書けない表現は無く，逆は成り立たない
+  - paths-ignoreで書けてpathsで書けない表現は無く、逆は成り立たない
 
 参考：[GitHub Actionsにおけるpathsとpaths-ignoreをベン図で理解する - Qiita](https://qiita.com/nacam403/items/3e2a5df5e88ba20aa76a)
 
 ### GitHub Actionsの中でsshを使ったgit cloneがしたい
+
+<!-- cspell:ignore MrSquaare -->
 
 ```yaml
 - name: Setup SSH

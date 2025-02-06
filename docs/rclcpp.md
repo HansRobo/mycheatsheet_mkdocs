@@ -67,7 +67,7 @@ get_parameter_or(
 
 `get_parameter`その3のラッパーで、3の返り値がfalseのときに3番目の引数を返す。  
 **パラメータが宣言されていないときに自動で宣言してくれるような機能はない。**  
-返り値はROS空間からパラメータを取得できたかどうか（=alternative_valueが使われたときはfalseが返る）  
+返り値はROS空間からパラメータを取得できたかどうか。（=alternative_valueが使われたときはfalseが返る）  
 他のget_parameterと違って実装はnode_impl.hppにあるので注意。  
 
 ##### その2

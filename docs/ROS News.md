@@ -22,7 +22,7 @@ void spin_until_timeout(rclcpp::node_interfaces::NodeBaseInterface::SharedPtr no
 
 - [提案Issue](https://github.com/ros2/rclcpp/issues/1821)
 - [PullRequest #1874](https://github.com/ros2/rclcpp/pull/1874)
-  - 2022/01/24に`rolling`にマージ
+  - 2022/01/24に`rolling`へマージ
 - [デグレ発覚によりリバート #1956](https://github.com/ros2/rclcpp/pull/1956)
   - 2022/01/25
 - [現在再マージに向けて調整中 #1957](https://github.com/ros2/rclcpp/pull/1957)
@@ -51,10 +51,10 @@ std_msgs/msg/Int64MultiArray
 プルリク：[Pull Request #2041 · ros2/rclcpp · GitHub](https://github.com/ros2/rclcpp/pull/2041)  
 議論：[Issue #831 · ros2/rclcpp · GitHub](https://github.com/ros2/rclcpp/issues/831#issue-486100658)
 
-ROS1時代に逆行しようと言うのではなく，使いにくかったインタフェースを直すという意味
+ROS1時代に逆行しようと言うのではなく、使いにくかったインタフェースを直すという意味
 
 Nodeクラスのインタフェースは適切に分離されて提供されている
-しかし，複数の機能を必要とする関数などにはやや冗長な以下のような書き方を強要していた
+しかし、複数の機能を必要とする関数などにはやや冗長な以下のような書き方を強要していた
 
 ```c++
 create_service(
@@ -67,7 +67,7 @@ auto service = create_service(
   // ...
 ```
 
-そこで，コンセプトの考え方を取り入れて適切に権限管理されたNodeHandleを使ってこれを以下のように簡素化しようというのが今回のプルリク
+そこで、コンセプトの考え方を取り入れて適切に権限管理されたNodeHandleを使ってこれを以下のように簡素化しようというのが今回のプルリク
 
 ```c++
 create_service(
@@ -81,5 +81,7 @@ auto service = create_service(
 ```
 
 ### `ros2 topic echo`での `--timeout <sec>`オプション
+
+<!-- cspell:ignore arjo -->
 
 [Adds a timeout feature to rostopic echo by arjo129 · Pull Request #792 · ros2/ros2cli · GitHub](https://github.com/ros2/ros2cli/pull/792)

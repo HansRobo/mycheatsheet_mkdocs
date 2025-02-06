@@ -24,7 +24,7 @@ ssh-keygen -t rsa
 ```
 
 - 名前とパスワードを聞かれるので入力
-- 公開鍵（〜.pub）の中身をgithubに登録
+- 公開鍵（〜.pub）の中身をGitHubに登録
 
 [https://github.com/settings/keys](https://github.com/settings/keys)
 

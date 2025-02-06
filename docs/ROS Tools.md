@@ -34,6 +34,8 @@ Rviz2の上の部分にデータを表示するRviz2プラグイン
 
 ### rqt_embed_window
 
+<!-- cspell:ignore awesomebytes takeshi iwanari -->
+
 任意のウインドウをrqtで表示するプラグイン
 
 [awesomebytes/rqt_embed_window](https://github.com/awesomebytes/rqt_embed_window)
@@ -57,7 +59,7 @@ ROS2のCMakeを楽に書くためのプラグイン
 デフォルトでインストールされている  
 詳細は[ブログ](https://hans-robo.hatenablog.com/entry/2020/12/15/153503)を参照
 
-[amnet_cmake_auto](https://github.com/ament/ament_cmake/tree/rolling/ament_cmake_auto)
+[ament_cmake_auto](https://github.com/ament/ament_cmake/tree/rolling/ament_cmake_auto)
 
 ```CMake
 cmake_minimum_required(VERSION 3.5)
@@ -107,7 +109,7 @@ sudo apt install ros-$ROS_DISTRO-grepros
 ```
 <https://github.com/suurjaak/grepros>
 
-メッセージの型やトピック名，frame_idでフィルタリングしたり…
+メッセージの型やトピック名、frame_idでフィルタリングしたり…
 
 ```bash
 grepros frame_id=map --type geometry_msgs/* --live
@@ -120,7 +122,7 @@ grepros --topic *lidar* --max-per-topic 1 --live
 grepros --max-per-topic 1 --lines-per-message 30 --live --no-console-output --write my.bag
 ```
 
-現在のフォルダ以下にあるbagファイルの中で文字列検索が出来たり…
+現在のフォルダ以下にあるbagファイルの中で文字列検索ができたり…
 
 ```bash
 grepros -r "keyword"

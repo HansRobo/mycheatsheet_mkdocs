@@ -11,11 +11,13 @@ intro: ROS Tips
 ## vcstool
 
  OSRFでROS 2プロジェクトを引っ張ってきたDirk Thomas氏によって作られたメタリポジトリなどでのvcs操作をかんたんにするツール。
-  ただし、氏がNVIDIAに移籍してからは氏の対応が極端に遅くなり，IssueやPullRequestでは氏へ数多の”Friendly Ping”が送られているがそのほとんどは返信がない。
+  ただし、氏がNVIDIAに移籍してからは氏の対応が極端に遅くなり、IssueやPullRequestでは氏へ数多の”Friendly Ping”が送られているがそのほとんどは返信がない。
 
-  ROSコミュニティの中核の一つをなすこのツールがフリーズする状況は芳しくないため、Steven! Ragnarök氏のフォークやvcstools2を作るものも現れている。
+  ROSコミュニティの中核の1つをなすこのツールがフリーズする状況は芳しくないため、Steven! Ragnarök氏のフォークやvcstools2を作るものも現れている。
 
 ### 参考
+
+<!-- cspell:ignore MaxandreOgeret -->
 
 - [Status of vcstool · Issue #242 · dirk-thomas/vcstool · GitHub](https://github.com/dirk-thomas/vcstool/issues/242)  
 - [GitHub - MaxandreOgeret/vcstool2](https://github.com/MaxandreOgeret/vcstool2/)
@@ -35,12 +37,14 @@ intro: ROS Tips
   GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 ```
 
+<!-- cspell:ignore jspricke -->
+
   MoveIt2でも使われている他、Autowareでも試用されている
   [Network Dependents · jspricke/ros-deb-builder-action · GitHub](https://github.com/jspricke/ros-deb-builder-action/network/dependents)
 
 ### 公式ツール・パッケージの置き場所
 
-  複数オーガナイゼーションに別れて配置されているので忘れやすいのでメモ
+  複数オーガナイゼーションに別れて配置されているため忘れやすいのでメモ
 
 - [colcon · GitHub](https://github.com/colcon)
   - colcon本体・プラグイン
@@ -57,7 +61,7 @@ intro: ROS Tips
   - [ros2/ros2cli](https://github.com/ros2/ros2cli)
     - `ros2 <verb>`コマンド
   - [ros2/rclcpp](https://github.com/ros2/rclcpp)
-  - サンプル系（demosのほうがサンプルが豊富）
+  - サンプル系（demosのほうがサンプル豊富）
     - [ros2/examples](https://github.com/ros2/examples)
     - [ros2/demos](https://github.com/ros2/demos)
 - [ament · GitHub](https://github.com/ament)
@@ -130,6 +134,8 @@ pkg.evaluate_conditions(os.environ)
 [catkin\_pkg/condition.py L47](https://github.com/ros-infrastructure/catkin_pkg/blob/master/src/catkin_pkg/condition.py#L47)
 `$`付き文字が抽出されて…
 
+<!-- cspell:ignore alphanums -->
+
 ```python
 identifier = pp.Word('$', pp.alphanums + '_', min=2).setName('identifier')
 ```
@@ -163,7 +169,7 @@ return str(context.get(self.value[1:], ''))
 
 #### Goal Critic
 
-- ゴール付近に来たときに各Waypointとゴール座標の差分の平均をとってコストとする
+- ゴール付近に来たとき、各Waypointとゴール座標の差分の平均をとってコストとする
 
 #### Obstacle Critic
 
