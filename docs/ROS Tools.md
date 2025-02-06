@@ -107,20 +107,20 @@ sudo apt install ros-$ROS_DISTRO-grepros
 ```
 <https://github.com/suurjaak/grepros>
 
-メッセージの型やトピック名，frame_idでフィルタリングしたり...
+メッセージの型やトピック名，frame_idでフィルタリングしたり…
 
 ```bash
 grepros frame_id=map --type geometry_msgs/* --live
 grepros --topic *lidar* --max-per-topic 1 --live
 ```
 
-出力結果を新しいbagファイルに書き込んだり...
+出力結果を新しいbagファイルに書き込んだり…
 
 ```bash
 grepros --max-per-topic 1 --lines-per-message 30 --live --no-console-output --write my.bag
 ```
 
-現在のフォルダ以下にあるbagファイルの中で文字列検索が出来たり...
+現在のフォルダ以下にあるbagファイルの中で文字列検索が出来たり…
 
 ```bash
 grepros -r "keyword"

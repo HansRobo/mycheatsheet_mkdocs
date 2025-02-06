@@ -128,7 +128,7 @@ pkg.evaluate_conditions(os.environ)
 ```
 
 [catkin\_pkg/condition.py L47](https://github.com/ros-infrastructure/catkin_pkg/blob/master/src/catkin_pkg/condition.py#L47)
-`$`付き文字が抽出されて...
+`$`付き文字が抽出されて…
 
 ```python
 identifier = pp.Word('$', pp.alphanums + '_', min=2).setName('identifier')
