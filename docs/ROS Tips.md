@@ -184,3 +184,5 @@ return str(context.get(self.value[1:], ''))
 - それぞれのwaipointについての参照パスの最近傍点との距離の平均をコストとする
 
 #### Path Angle Critic
+
+## Topic統計機能
