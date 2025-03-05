@@ -22,9 +22,9 @@ void spin_until_timeout(rclcpp::node_interfaces::NodeBaseInterface::SharedPtr no
 
 - [提案Issue](https://github.com/ros2/rclcpp/issues/1821)
 - [PullRequest #1874](https://github.com/ros2/rclcpp/pull/1874)
-  - 2022/01/24に`rolling`へマージ
+    - 2022/01/24に`rolling`へマージ
 - [デグレ発覚によりリバート #1956](https://github.com/ros2/rclcpp/pull/1956)
-  - 2022/01/25
+    - 2022/01/25
 - [現在再マージに向けて調整中 #1957](https://github.com/ros2/rclcpp/pull/1957)
 
 ### `ros2 interface package` にフィルターのオプション追加

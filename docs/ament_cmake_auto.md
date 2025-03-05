@@ -12,45 +12,45 @@ intro: ament_cmake_auto
 ## ament_auto_add_library
 
 - 引数  
-  - 【bool】NO_TARGET_LINK_LIBRARIES  
-  - 【bool】EXCLUDE_FROM_ALL  
-  - 【bool】MODULE  
-  - 【bool】SHARED  
-  - 【bool】STATIC  
-  - DIRECTORY  
-    - ここにあるソースファイルはすべてビルド対象に  
-  - target
+    - 【bool】NO_TARGET_LINK_LIBRARIES  
+    - 【bool】EXCLUDE_FROM_ALL  
+    - 【bool】MODULE  
+    - 【bool】SHARED  
+    - 【bool】STATIC  
+    - DIRECTORY  
+        - ここにあるソースファイルはすべてビルド対象に  
+    - target
 - やること
-  - add_library
-    - DIRECTORYで指定したフォルダのソースファイル全部
-  - target_include_directories
-    - includeフォルダ
-  - target_link_libraries
-    - プロジェクトで作ったライブラリ全部
-  - ament_target_dependencies
-    - プロジェクトの依存関係にあるやつ全部
+    - add_library
+        - DIRECTORYで指定したフォルダのソースファイル全部
+    - target_include_directories
+        - includeフォルダ
+    - target_link_libraries
+        - プロジェクトで作ったライブラリ全部
+     - ament_target_dependencies
+        - プロジェクトの依存関係にあるやつ全部
 
 ### ament_auto_package
 
 - 引数
-  - 【bool】INSTALL_TO_PATH
-  - 【複数指定可】INSTALL_TO_SHARE
-    - launchフォルダとかを指定すると追加でインストールできる
+    - 【bool】INSTALL_TO_PATH
+    - 【複数指定可】INSTALL_TO_SHARE
+        - launchフォルダとかを指定すると追加でインストールできる
 - やること
-  - ament_export_dependencies
-  - ament_export_include_directories
-  - ament_export_libraries
-    - ament_auto_add_libraryを使っていないライブラリはexportされないので注意
-  - install
-    - include/*
-      - include
+    - ament_export_dependencies
+    - ament_export_include_directories
+    - ament_export_libraries
+        - ament_auto_add_libraryを使っていないライブラリはexportされないので注意
+    - install
+        - include/*
+        - include
     - ライブラリ
-      - lib / bin
+        - lib / bin
     - 実行ファイル
-      - lib
+        - lib
     - その他
-      - `INSTALL_TO_SHARE`で指定したもの
-        - share
+         - `INSTALL_TO_SHARE`で指定したもの
+            - share
   - ament_package
     - 使わなかった引数はこちらに渡される
 

@@ -51,5 +51,5 @@ cmake_parse_arguments(
 
 - 変数はセミコロン区切りで複数指定可能
 - CMakeには名前空間がないのでプレフィックスをつけることで名前の衝突を回避
-  - 今回は`MYFUNC_VAR1`とかになる
+    - 今回は`MYFUNC_VAR1`とかになる
 - パースされなかったものは`PREFIX_UNPARSED_ARGUMENTS`に詰められる
