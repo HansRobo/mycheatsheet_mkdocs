@@ -9,6 +9,8 @@ created: 2025-03-05 23:55:59
     - KIKS OB 木村氏による非公式日本語訳
 - [RJC ロボカップ日本委員会](https://www.robocup.or.jp)
 - [RoboCup SSL · GitHub](https://github.com/RoboCup-SSL)
+- [Roots Home](https://ssl-roots.github.io/Roots_home/)
+    - 日本のチーム、RootsがRoboCup SSLを知らない人、参加したい人、すでに参加している人に向けて 設計資料を公開している
 
 ## コミュニケーションツール
 
@@ -16,3 +18,7 @@ created: 2025-03-05 23:55:59
     - リーグ全体
 - Slack
     - 日本国内
+
+## 関連ツール
+
+[Technical Overview of the Small Size League – Small Size League \| RoboCup Soccer](https://ssl.robocup.org/technical-overview-of-the-small-size-league/)
