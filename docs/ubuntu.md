@@ -208,3 +208,10 @@ markitdown https://youtu.be/nuQvDqgdzMg
 ### Description
 ROSJPのLTで発表したときに使用したデモ動画です。
 ```
+
+
+## Davinchi Resolve for Ubuntu 24.04
+
+```bash
+sudo apt install libfuse-dev libapr1-dev libxcb-cursor0
+```
