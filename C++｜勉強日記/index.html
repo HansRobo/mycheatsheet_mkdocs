@@ -1,0 +1,2973 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../C%2B%2B%EF%BD%9C%E3%83%93%E3%83%AB%E3%83%89%E6%99%82%E9%96%93%E7%9F%AD%E7%B8%AE/">
+      
+      
+        <link rel="next" href="../C%2B%2B%EF%BD%9C%E7%AF%84%E5%9B%B2for%E6%96%87/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.0">
+    
+    
+      
+        <title>C++｜cppreference.com勉強日記 - HansRobo's cheatsheet</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.618322db.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+  
+
+
+  
+  
+
+<script id="__analytics">function __md_analytics(){function e(){dataLayer.push(arguments)}window.dataLayer=window.dataLayer||[],e("js",new Date),e("config","G-8WVDNWYEQF"),document.addEventListener("DOMContentLoaded",(function(){document.forms.search&&document.forms.search.query.addEventListener("blur",(function(){this.value&&e("event","search",{search_term:this.value})}));document$.subscribe((function(){var t=document.forms.feedback;if(void 0!==t)for(var a of t.querySelectorAll("[type=submit]"))a.addEventListener("click",(function(a){a.preventDefault();var n=document.location.pathname,d=this.getAttribute("data-md-value");e("event","feedback",{page:n,data:d}),t.firstElementChild.disabled=!0;var r=t.querySelector(".md-feedback__note [data-md-value='"+d+"']");r&&(r.hidden=!1)})),t.hidden=!1})),location$.subscribe((function(t){e("config","G-8WVDNWYEQF",{page_path:t.pathname})}))}));var t=document.createElement("script");t.async=!0,t.src="https://www.googletagmanager.com/gtag/js?id=G-8WVDNWYEQF",document.getElementById("__analytics").insertAdjacentElement("afterEnd",t)}</script>
+  
+    <script>"undefined"!=typeof __md_analytics&&__md_analytics()</script>
+  
+
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="amber" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#try" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="HansRobo&#39;s cheatsheet" class="md-header__button md-logo" aria-label="HansRobo's cheatsheet" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            HansRobo's cheatsheet
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              C++｜cppreference.com勉強日記
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/HansRobo/mycheatsheet_mkdocs" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="HansRobo&#39;s cheatsheet" class="md-nav__button md-logo" aria-label="HansRobo's cheatsheet" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    HansRobo's cheatsheet
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/HansRobo/mycheatsheet_mkdocs" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Welcome to MkDocs
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../AI%E3%81%A8%E3%81%AE%E4%BB%98%E3%81%8D%E5%90%88%E3%81%84%E6%96%B9/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    AIとの付き合い方
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../C%2B%2B%20ranges/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    C++ ranges
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../C%2B%2B%E3%83%91%E3%83%83%E3%82%B1%E3%83%BC%E3%82%B8%E3%83%9E%E3%83%8D%E3%83%BC%E3%82%B8%E3%83%A3/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    C++パッケージマネージャ
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../C%2B%2B%EF%BD%9C%E3%82%A4%E3%83%87%E3%82%A3%E3%82%AA%E3%83%A0/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    C++｜便利イディオム
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../C%2B%2B%EF%BD%9C%E3%83%93%E3%83%AB%E3%83%89%E6%99%82%E9%96%93%E7%9F%AD%E7%B8%AE/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    C++｜ビルド時間短縮
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    C++｜cppreference.com勉強日記
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    C++｜cppreference.com勉強日記
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#try" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        関数Tryブロック
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#main" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        main関数
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#stdmin_element-stdmax_element" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        std::min_element, std::max_element
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#c17" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        実行ポリシー(C++17)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#stdminmax_element" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        std::minmax_element
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#stdenable_shared_from_this" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        std::enable_shared_from_this
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#stdfuture" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        std::future
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#stdpromise" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        std::promise
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#c11" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        委譲コンストラクタ(C++11)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#c11_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        初期化子リスト(C++11)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#c11_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        一様初期化(C++11)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#c11_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        インライン名前空間(C++11)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#c17_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        入れ子名前空間の定義(C++17)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#c20" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        入れ子名前空間でのインライン名前空間(C++20)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#forc11" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        範囲for文(C++11)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#forc17" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        範囲forループの制限緩和(C++17)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#for" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        範囲for文がカスタマイゼーションポイントを見つけるルールを緩和
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#c11_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        属性構文(C++11)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#noreturnc11" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        noreturn属性(C++11)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#carries_dependencyc11" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        carries_dependency属性(C++11)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#deprecatedc14" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        deprecated属性(C++14)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#maybe_unusedc17" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        maybe_unused属性(C++17)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#nodiscardc17" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        nodiscard属性(C++17)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#fallthroughc17" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        fallthrough属性(C++17)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#optionaland_then-c23" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        optional::and_then (C++23)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#c20_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        指示付き初期化(C++20)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="指示付き初期化(C++20)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        用語
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        注意
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        名前付き引数のようなもの
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#invoke" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        INVOKE要件
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="INVOKE要件">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        用語
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#stdinvokec17" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        std::invoke(C++17)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#stdcopysignc11" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        std::copysign(C++11)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#stdexchangec14" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        std::exchange(C++14)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#stdswapc11" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        std::swap(C++11)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#stdpartitionc03" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        std::partition(C++03)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#stdmismatchc03" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        std::mismatch(C++03)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="std::mismatch(C++03)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#coming-soon" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Coming Soon
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../C%2B%2B%EF%BD%9C%E7%AF%84%E5%9B%B2for%E6%96%87/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    C++｜範囲for文
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../CMake/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    CMake
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../GNOME%20%E6%8B%A1%E5%BC%B5%E6%A9%9F%E8%83%BD/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    おすすめGNOME拡張機能
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../GitHub%20Actions/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    GitHub Actions
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../GitHub/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    GitHub
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../KDE/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    KDE関連メモ
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ROS%20Context/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ROS Context
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ROS%20Message/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ROS Message
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ROS%20News/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ROS News
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ROS%20Packages/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ROS便利パッケージ集
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ROS%20Tips/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ROS Tips
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ROS%20Tools/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ROS Tools
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ROS%E8%B2%A2%E7%8C%AE%E3%83%9D%E3%82%A4%E3%83%B3%E3%83%88%E3%83%A1%E3%83%A2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ROS貢献ポイントメモ
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../RoboCup%20Soccer%20SSL/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    RoboCup Soccer SSL
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../VSCode%20%E6%8B%A1%E5%BC%B5%E6%A9%9F%E8%83%BD/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    VSCode 拡張機能
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ament_cmake_auto/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ament_cmake_auto
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ansible/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ansible
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../bash/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Bash
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../colcon/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    colcon
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../docker/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Docker
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../git/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Git
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../obsidian/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Obsidian
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../rclcpp/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Rclcpp
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ubuntu-pro/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Ubuntu Pro
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ubuntu/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ubuntu
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../vivaldi/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    vivaldi
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../%E3%83%87%E3%83%90%E3%83%83%E3%82%B0%E3%83%84%E3%83%BC%E3%83%AB/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    デバッグのための道具
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../%E3%83%90%E3%82%B0%E3%81%AE%E5%88%86%E9%A1%9E%E3%83%BB%E3%82%B8%E3%83%A7%E3%83%BC%E3%82%AF/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    バグの分類・ジョーク
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../%E3%83%A1%E3%83%87%E3%82%A3%E3%82%A2%E6%93%8D%E4%BD%9C/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    メディア操作メモ
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../%E5%AE%87%E5%AE%99%E9%96%A2%E9%80%A3/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    宇宙関連
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../%E8%AB%96%E6%96%87%E8%AA%AD%E3%81%BF%E8%A3%9C%E5%8A%A9%E3%83%84%E3%83%BC%E3%83%AB/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    論文読み補助ツール
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_39" >
+        
+          
+          <label class="md-nav__link" for="__nav_39" id="__nav_39_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    LiDAR
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_39_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_39">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    LiDAR
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../LiDAR/RoboSense/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    RoboSense
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#try" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        関数Tryブロック
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#main" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        main関数
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#stdmin_element-stdmax_element" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        std::min_element, std::max_element
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#c17" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        実行ポリシー(C++17)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#stdminmax_element" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        std::minmax_element
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#stdenable_shared_from_this" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        std::enable_shared_from_this
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#stdfuture" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        std::future
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#stdpromise" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        std::promise
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#c11" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        委譲コンストラクタ(C++11)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#c11_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        初期化子リスト(C++11)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#c11_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        一様初期化(C++11)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#c11_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        インライン名前空間(C++11)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#c17_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        入れ子名前空間の定義(C++17)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#c20" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        入れ子名前空間でのインライン名前空間(C++20)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#forc11" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        範囲for文(C++11)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#forc17" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        範囲forループの制限緩和(C++17)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#for" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        範囲for文がカスタマイゼーションポイントを見つけるルールを緩和
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#c11_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        属性構文(C++11)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#noreturnc11" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        noreturn属性(C++11)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#carries_dependencyc11" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        carries_dependency属性(C++11)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#deprecatedc14" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        deprecated属性(C++14)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#maybe_unusedc17" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        maybe_unused属性(C++17)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#nodiscardc17" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        nodiscard属性(C++17)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#fallthroughc17" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        fallthrough属性(C++17)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#optionaland_then-c23" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        optional::and_then (C++23)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#c20_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        指示付き初期化(C++20)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="指示付き初期化(C++20)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        用語
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        注意
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        名前付き引数のようなもの
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#invoke" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        INVOKE要件
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="INVOKE要件">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        用語
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#stdinvokec17" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        std::invoke(C++17)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#stdcopysignc11" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        std::copysign(C++11)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#stdexchangec14" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        std::exchange(C++14)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#stdswapc11" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        std::swap(C++11)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#stdpartitionc03" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        std::partition(C++03)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#stdmismatchc03" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        std::mismatch(C++03)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="std::mismatch(C++03)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#coming-soon" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Coming Soon
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+  <nav class="md-tags" >
+    
+      
+      
+      
+      
+        <span class="md-tag">Featured</span>
+      
+    
+  </nav>
+
+
+  
+  
+
+
+  <h1>C++｜cppreference.com勉強日記</h1>
+
+<h3 id="try"><a href="https://ja.cppreference.com/w/cpp/language/function-try-block">関数Tryブロック</a><a class="headerlink" href="#try" title="Permanent link">&para;</a></h3>
+<p>以下のようなコードがかけちゃうらしい。
+マジか、tryそんなとこに書けたんか</p>
+<pre><code class="language-cpp">int main() try {}
+catch (...){}
+</code></pre>
+<h3 id="main"><a href="https://ja.cppreference.com/w/cpp/language/main_function">main関数</a><a class="headerlink" href="#main" title="Permanent link">&para;</a></h3>
+<p>いわゆるエントリポイント、<code>main</code>関数</p>
+<ul>
+<li><code>main</code>関数は<code>int</code>型だが、return文はなくてもOK</li>
+<li><code>auto main()</code>という書き方はダメらしい</li>
+<li><code>return N</code>は<code>std::exit(N)</code>と同じ意味を持つ</li>
+<li><code>main</code>関数が関数<code>try</code>ブロックになっていてもmain関数の外で定義された（しかし、<code>main</code>関数の終了と同時に破棄される）静的オブジェクトのデストラクタで投げられた例外はキャッチできない</li>
+</ul>
+<h3 id="stdmin_element-stdmax_element"><a href="https://ja.cppreference.com/w/cpp/algorithm/min_element">std::min_element</a>, <a href="https://ja.cppreference.com/w/cpp/algorithm/max_element">std::max_element</a><a class="headerlink" href="#stdmin_element-stdmax_element" title="Permanent link">&para;</a></h3>
+<ul>
+<li>最低限、探索範囲を[first, last)で指定できる。</li>
+<li>比較には<code>&lt;</code>演算子を使用（<code>max_element</code>は<code>&gt;</code>演算子を使うわけではない）</li>
+<li><code>&lt;</code>演算子の代わりに比較関数を指定できる。<ul>
+<li>比較関数は<code>cmp(new_element, best_element)</code>という形式で使われる</li>
+<li>⇒内容によって意図的に弾きたい場合は、第一引数の内容を参照して弾けば良い（min_elementならfalse,max_elementならtrueを返せば弾ける）</li>
+</ul>
+</li>
+<li>実行ポリシーを設定できるらしい（知らんかった)。指定箇所は探索範囲の前。<ul>
+<li>詳しくは<a href="https://ja.cppreference.com/w/cpp/algorithm/execution_policy_tag_t">実行ポリシー</a>参照とのこと</li>
+</ul>
+</li>
+</ul>
+<h3 id="c17"><a href="https://ja.cppreference.com/w/cpp/algorithm/execution_policy_tag_t">実行ポリシー(C++17)</a><a class="headerlink" href="#c17" title="Permanent link">&para;</a></h3>
+<p>stlにはたくさんのアルゴリズム関数が存在するが、それらの第一引数にアルゴリズムの処理を実行する上での制約を「実行ポリシー」として与えることができるらしい。
+「実行ポリシー」は以下のような種類が存在する</p>
+<table>
+<thead>
+<tr>
+<th>実行ポリシー</th>
+<th>説明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>seq</code></td>
+<td>順番に処理を実行する必要がある．当然並列化も出来ない</td>
+</tr>
+<tr>
+<td><code>par</code></td>
+<td>マルチスレッド化による並列化を許可する</td>
+</tr>
+<tr>
+<td><code>par_unseq</code></td>
+<td>マルチスレッド化・ベクトル化を許可する</td>
+</tr>
+<tr>
+<td><code>unseq</code></td>
+<td>ベクトル化を許可する（C++20）</td>
+</tr>
+</tbody>
+</table>
+<p>今までのアルゴリズム関数は<code>seq</code>で実行されるのが当然だった。
+プログラマにから与えられた関数オブジェクトの処理はどういう処理なのかをアルゴリズム関数は知らないのだからそりゃそうだ。
+でも、そのプログラマが処理についてアルゴリズム関数にヒントを与えられるのがこの機能というわけだ。
+もしかしなくても「OpenMPを使ったfor文の並列化は簡単でいいなぁ」と言っていた時代は終わったのかもしれない。</p>
+<pre><code class="language-cpp">std::for_each(std::execution::par, a.begin(), b.end(), [&amp;](int x) {
+    std::cout &lt;&lt; x &lt;&lt; std::endl;
+});
+</code></pre>
+<h3 id="stdminmax_element"><a href="https://ja.cppreference.com/w/cpp/algorithm/minmax_element">std::minmax_element</a><a class="headerlink" href="#stdminmax_element" title="Permanent link">&para;</a></h3>
+<ul>
+<li>コンテナの範囲を渡すと、最大値と最小値をペアにして返してくれる</li>
+<li>例によって二項比較関数は<code>&lt;</code>演算子相当のものを定義して渡せば良い</li>
+<li>C++17からは実行ポリシーも指定可能</li>
+<li><code>std::make_pair(std::min_element(), std::max_element())</code>よりも効率が良い</li>
+<li>一番大きい/小さい要素が複数ある場合、↑は最初の要素を返し、本アルゴリズムは最後の要素を返す</li>
+</ul>
+<pre><code class="language-cpp">const auto [min, max] = std::minmax_element(begin(v), end(v));
+</code></pre>
+<h3 id="stdenable_shared_from_this"><a href="https://ja.cppreference.com/w/cpp/memory/enable_shared_from_this">std::enable_shared_from_this</a><a class="headerlink" href="#stdenable_shared_from_this" title="Permanent link">&para;</a></h3>
+<p>クラス内で<code>this</code>を<code>shared_ptr</code>にしたい場合が往々にしてある。（すべて自分のコードの場合では設計が悪い場合が多い一方で、外部ライブラリを使用しているとそうするしかない場合もありがち）
+そういう時に、<code>std::shared_ptr&lt;T&gt;(this)</code>などとやってしまうと、<code>this</code>は2回以上破棄されてしまいやすい。</p>
+<p>そんな時に使うのが、これ<code>std::enable_shared_from_this</code>. 使い方は<code>shared_ptr</code>化したいクラスで<code>std::enable_shared_from_this</code>をpublic継承し、<code>shared_from_this()</code>を呼ぶだけ。
+しかし、**本機能を使っているクラスは必ずshared_ptrで管理されている必要がある**ので注意が必要。そうでない場合の動作は未定義。</p>
+<pre><code class="language-cpp">class A : public std::enable_shared_from_this {
+A(){
+  auto shared_ptr_this = shared_from_this();
+}
+};
+</code></pre>
+<h3 id="stdfuture"><a href="https://ja.cppreference.com/w/cpp/thread/future">std::future</a><a class="headerlink" href="#stdfuture" title="Permanent link">&para;</a></h3>
+<p>非同期処理を行うためのクラス。このクラスでは、今は存在しないが「未来」に手に入るであろうデータを取り扱う。<br />
+データが手に入ったかどうかは、<code>valid</code>関数で調べることができ、<code>get</code>関数で取り出せる。<br />
+また、手に入るまで待機する<code>wait</code>関数も何種類か用意されている。</p>
+<table>
+<thead>
+<tr>
+<th>関数名</th>
+<th>説明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>wait</code></td>
+<td>処理完了まで待つ</td>
+</tr>
+<tr>
+<td><code>wait_for(&lt;duration&gt;)</code></td>
+<td>処理完了まで待つ（指定時間でタイムアウト）</td>
+</tr>
+<tr>
+<td><code>wait_until(&lt;time_point&gt;)</code></td>
+<td>処理完了まで待つ（指定時間になったらタイムアウト）</td>
+</tr>
+</tbody>
+</table>
+<h3 id="stdpromise"><a href="https://cpprefjp.github.io/reference/future/promise.html">std::promise</a><a class="headerlink" href="#stdpromise" title="Permanent link">&para;</a></h3>
+<p><code>std::future</code>にでき上がったデータを受け渡す役割を持ったクラス。<br />
+使い方は以下のような感じ</p>
+<pre><code class="language-cpp">std::promise&lt;int&gt; p;
+std::future&lt;int&gt; f = p.get_future();
+
+p.set_value(1);
+
+std::cout &lt;&lt; f.get() &lt;&lt; std::endl;
+</code></pre>
+<p><code>std::promise</code>は、データを渡す相手に「今はまだ空だけど、将来ここにデータを送るからね」と言って<code>std::future</code>を渡す。<br />
+後日、データを見つけたstd::promise<code>は</code>set_value<code>関数でデータを送り、</code>std::future<code>側では</code>get`関数で受けとれる。</p>
+<h3 id="c11"><a href="https://cpprefjp.github.io/lang/cpp11/delegating_constructors.html">委譲コンストラクタ(C++11)</a><a class="headerlink" href="#c11" title="Permanent link">&para;</a></h3>
+<p>C++11からの機能。複数のコンストラクタ内で共通の処理を初期化処理で行える。<br />
+（コンストラクタの本体にメンバ関数を呼び出す方法もあるが、メンバ関数は初期化が完了した後にしか呼び出せない共通処理なので、ベタ書きしたり委譲コンストラクタを使う場合に比べてパフォーマンスで劣る）</p>
+<pre><code class="language-cpp">class X {
+public:
+  X(int i) { std::cout &lt;&lt; i &lt;&lt; std::endl; }
+  X() : X(42) {}
+};
+</code></pre>
+<h3 id="c11_1"><a href="https://cpprefjp.github.io/lang/cpp11/initializer_lists.html">初期化子リスト(C++11)</a><a class="headerlink" href="#c11_1" title="Permanent link">&para;</a></h3>
+<p>以下のような、波括弧による初期化を可能とする'</p>
+<pre><code class="language-cpp">std::vector&lt;int&gt; v1 = {1, 2, 3};
+std::vector&lt;int&gt; v2 {1, 2, 3};
+</code></pre>
+<p>初期化子リストを使うには、<code>std::initializer_list</code>を引数とするコンストラクタが必要'</p>
+<pre><code class="language-cpp">class MyVector {
+  std::vector&lt;int&gt; data_;
+public:
+  MyVector(std::initializer_list&lt;int&gt; init)
+    : data_(init.begin(), init.end()) {}};
+</code></pre>
+<h3 id="c11_2"><a href="https://cpprefjp.github.io/lang/cpp11/uniform_initialization.html">一様初期化(C++11)</a><a class="headerlink" href="#c11_2" title="Permanent link">&para;</a></h3>
+<p><code>std::initilizer_list</code>以外のコンストラクタも波括弧を使った初期化ができる機能。<br />
+情報が足りていなかったりすると、<code>std::initializer_list</code>型として推論されてしまったりするので注意。</p>
+<pre><code class="language-cpp">struct X {
+  X(int, double, std::string) {}
+};
+X createX(){return {1, 3.14, &quot;hello&quot;}; }
+</code></pre>
+<p><code>std::initializer_list</code>のコンストラクタとそれ以外のコンストラクタの両方で受け取れるような波括弧リストを渡す時、前者が呼び出される。<br />
+ただし、空の初期化子リストを渡す場合はデフォルトコンストラクタが優先される。</p>
+<h3 id="c11_3"><a href="https://cpprefjp.github.io/lang/cpp11/inline_namespaces.html">インライン名前空間(C++11)</a><a class="headerlink" href="#c11_3" title="Permanent link">&para;</a></h3>
+<pre><code class="language-cpp">inline namespace my_namespace{}
+</code></pre>
+<p>省略可能な名前空間を定義できる。<br />
+上位の名前空間を<code>using</code>するだけで下位のinline名前空間の機能が使えるようになるので、本来なら複数の<code>using</code>文が必要な場合も、1つで事足りる。  </p>
+<p>以下のように、複数バージョンの関数がそれぞれのバージョンの名前空間にある時、1つだけ<code>inline</code>名前空間で定義することによりデフォルトのバージョンを表現することができる。</p>
+<p>また、デフォルトバージョンを変更する場合も<code>inline</code>名前空間を切り替えるだけで実現できる。  </p>
+<pre><code class="language-cpp">namespace api {
+  inline namespace v1 {
+    void f(){}
+  }
+  namespace v2 {
+    void f(){}
+  }
+}
+</code></pre>
+<h3 id="c17_1"><a href="https://cpprefjp.github.io/lang/cpp17/nested_namespace.html">入れ子名前空間の定義(C++17)</a><a class="headerlink" href="#c17_1" title="Permanent link">&para;</a></h3>
+<p>入れ子上になった名前空間を一度に定義することが可能になる</p>
+<p>C++14まで</p>
+<pre><code class="language-cpp">namespace aa{
+  namespace bb{
+    void f(){}
+  }
+}
+</code></pre>
+<p>C++17から</p>
+<pre><code class="language-cpp">namespace aa::bb{
+  void f(){}
+}
+</code></pre>
+<h3 id="c20"><a href="https://cpprefjp.github.io/lang/cpp20/nested_inline_mamespaces.html">入れ子名前空間でのインライン名前空間(C++20)</a><a class="headerlink" href="#c20" title="Permanent link">&para;</a></h3>
+<p>C++11からのインライン名前空間とC++17からの入れ子名前空間の併用は出来なかったが、C++20からできるようになった</p>
+<p>C++17</p>
+<pre><code class="language-cpp">namespace aa{
+  inline namespace bb{
+    void f(){}
+  }
+}
+</code></pre>
+<p>C++20</p>
+<pre><code class="language-cpp">namespace aa::inline bb{
+  void f(){}
+}
+</code></pre>
+<h3 id="forc11"><a href="https://cpprefjp.github.io/lang/cpp11/range_based_for.html">範囲for文(C++11)</a><a class="headerlink" href="#forc11" title="Permanent link">&para;</a></h3>
+<p>for文を簡潔に書くことができる機能。</p>
+<pre><code class="language-cpp">for ( auto element : elements ) std::cout &lt;&lt; element &lt;&lt; std::endl;
+</code></pre>
+<p>↑は↓のように展開される（C++17以降や、配列を扱う時は展開され方が異なる）</p>
+<pre><code class="language-cpp">auto &amp;&amp; __range = elements;
+for (auto __begin = __range.begin(), __end = __range.end(); __begin != __end; ++__begin) {
+  auto element = *__begin;
+  std::cout &lt;&lt; element &lt;&lt; std::endl;
+}
+</code></pre>
+<p>↑からわかるように、<code>begin()</code>,<code>end()</code>,<code>operator++()</code>, <code>operator*()</code>, <code>operator!=()</code>が適切に定義されていれば自作クラスでも使える。</p>
+<p>注意点</p>
+<ul>
+<li>要素をeraseしてはいけない(バグる)</li>
+<li>インデックスの取得とは相性が悪い（できないこともない：<a href="https://hansrobo.github.io/mycheatsheets/range-based-for#:~:text=%E7%AF%84%E5%9B%B2for%E6%96%87(range%2Dbased%20for)%E3%81%A7%E3%82%A4%E3%83%B3%E3%83%87%E3%83%83%E3%82%AF%E3%82%B9%E3%82%92%E4%BD%BF%E3%81%84%E3%81%9F%E3%81%84">別ページ</a>参照）</li>
+<li>範囲として渡した配列などが、範囲for文実行中に寿命が切れないように注意</li>
+</ul>
+<h3 id="forc17"><a href="https://cpprefjp.github.io/lang/cpp17/generalizing_the_range-based_for_loop.html">範囲forループの制限緩和(C++17)</a><a class="headerlink" href="#forc17" title="Permanent link">&para;</a></h3>
+<p>範囲for文を適用するコンテナの<code>begin()</code>関数と<code>end()</code>関数の戻り値の型が一致していなくても良くなった。<br />
+正直使う機会は少ないが、番兵法アルゴリズムを使いたいときなどは便利に使えるらしい。<br />
+使いたいから緩和したというより、制限する意味がなかったから緩和したという方が正しそう？  </p>
+<h3 id="for"><a href="https://cpprefjp.github.io/lang/cpp20/relaxing_the_range_for_loop_customization_point_finding_rules.html">範囲for文がカスタマイゼーションポイントを見つけるルールを緩和</a><a class="headerlink" href="#for" title="Permanent link">&para;</a></h3>
+<p>範囲for文を展開する時に<code>begin()</code>と<code>end()</code>を探すルールが変更された。（C++11まで遡って変更されていて、<a href="https://cpprefjp.github.io/implementation-status.html#:~:text=%E3%81%97%E3%81%AB%E3%81%84%E3%81%8F-,8,8,-2019%20Update%205">gcc8,clang8以降で適用されている</a>）  </p>
+<p>適用前イメージ</p>
+<pre><code class="language-cpp">if ( beginメンバ関数が存在 OR endメンバ関数が存在 ){
+  beginメンバ関数を使用
+}else{
+  非メンバbegin/end関数を探す&amp;使う
+}
+</code></pre>
+<p>適用後イメージ</p>
+<pre><code class="language-cpp">if ( beginメンバ関数が存在 AND endメンバ関数が存在 ){
+  begin/endメンバ関数を使用
+}else{
+  非メンバbegin/end関数を探す&amp;使う
+}
+</code></pre>
+<p><a href="https://cpprefjp.github.io/lang/cpp20/relaxing_the_range_for_loop_customization_point_finding_rules.html">cppref.jpのページ</a>のサンプルコードは説明が少なくてわかりにくいので、以下解説  </p>
+<ul>
+<li>そもそも<code>std_stringstream</code>には<code>begin()</code>と<code>end()</code>が存在しない</li>
+<li>しかし、<code>std_stringstream</code>が継承している<code>std::ios_base</code>には<a href="https://cpprefjp.github.io/reference/ios/ios_base/type-seekdir.html#:~:text=current%20%E3%81%AE%E7%95%A5%EF%BC%89-,end,-%E3%82%B9%E3%83%88%E3%83%AA%E3%83%BC%E3%83%A0%E3%81%AE%E7%8F%BE%E5%9C%A8"><code>std::ios_base::end</code></a>(関数ではない)が存在する</li>
+<li><code>std::ios_base::end</code>が範囲for文に必要な<code>end</code>として認識される</li>
+<li>適用前のルールだと、<code>begin</code>の存在を確認することなくメンバ関数で範囲forの展開をしてしまう</li>
+<li>適用後のルールでは、<code>begin</code>の存在も確認を行うため、<code>std::ios_base::end</code>は範囲forの展開に使われない</li>
+<li>適用後のルールでは結局非メンバの<code>begin</code>と<code>end</code>が使われて問題なくコンパイルできる</li>
+</ul>
+<h3 id="c11_4"><a href="https://cpprefjp.github.io/lang/cpp11/attributes.html">属性構文(C++11)</a><a class="headerlink" href="#c11_4" title="Permanent link">&para;</a></h3>
+<p>ソースコードに関する追加の情報をコンパイラに伝えるための構文<br />
+主に、コンパイラの最適化のためと警告抑制のために使われる印象<br />
+型などとは違い、ユーザが属性を定義することは出来ない。  </p>
+<p>現在存在するのは以下</p>
+<ul>
+<li><a href="https://cpprefjp.github.io/lang/cpp11/attributes.html#noreturn">noreturn(C++11)</a></li>
+<li><a href="https://cpprefjp.github.io/lang/cpp11/attributes.html#carries_dependency">carries_dependency(C++11)</a></li>
+<li><a href="https://cpprefjp.github.io/lang/cpp14/deprecated_attr.html">deprecated(C++14)</a></li>
+<li><a href="https://cpprefjp.github.io/lang/cpp17/maybe_unused.html">maybe_unused(C++17)</a></li>
+<li><a href="https://cpprefjp.github.io/lang/cpp17/nodiscard.html">nodiscard(C++17)</a></li>
+<li><a href="https://cpprefjp.github.io/lang/cpp17/fallthrough.html">fallthrough(c++17)</a></li>
+<li><a href="https://cpprefjp.github.io/lang/cpp20/language_support_for_empty_objects.html">no_unique_address(c++20)</a></li>
+<li><a href="https://cpprefjp.github.io/lang/cpp20/likely_and_unlikely_attributes.html">likely, unlikely (c++20)</a></li>
+</ul>
+<h3 id="noreturnc11"><a href="https://cpprefjp.github.io/lang/cpp11/attributes.html#noreturn">noreturn属性(C++11)</a><a class="headerlink" href="#noreturnc11" title="Permanent link">&para;</a></h3>
+<p>⇒警告抑制タイプの属性：「関数が返らないパスの存在」という警告を抑制<br />
+⇒最適化促進タイプの属性：制約を増して最適化に寄与  </p>
+<pre><code class="language-cpp">[[noreturn]] void report_error(){
+  throw std::runtime_error(&quot;error&quot;);
+}
+</code></pre>
+<p>関数が決して返らない（=必ず例外が投げられる？）ことをコンパイラに伝える。<br />
+この属性がついた関数が返る場合の動作は未定義。</p>
+<h3 id="carries_dependencyc11"><a href="https://cpprefjp.github.io/lang/cpp11/attributes.html#carries_dependency">carries_dependency属性(C++11)</a><a class="headerlink" href="#carries_dependencyc11" title="Permanent link">&para;</a></h3>
+<p>TBD  </p>
+<p>TODO:</p>
+<ul>
+<li><a href="https://cpprefjp.github.io/reference/atomic/atomic.html">std::atomic</a></li>
+<li><a href="https://cpprefjp.github.io/reference/atomic/memory_order.html">std::memory_order</a></li>
+</ul>
+<h3 id="deprecatedc14"><a href="https://cpprefjp.github.io/lang/cpp14/deprecated_attr.html">deprecated属性(C++14)</a><a class="headerlink" href="#deprecatedc14" title="Permanent link">&para;</a></h3>
+<pre><code class="language-cpp">[[deprecated(&quot;please use new_func() function&quot;)]] void old_func() {}
+</code></pre>
+<p>非推奨であることを示す属性。使うとコンパイル時に警告を発する<br />
+警告で出すメッセージも指定できるので、代わりに使って欲しい機能を示すとより親切<br />
+この属性が使える場所は以下の通り</p>
+<ul>
+<li>クラス</li>
+<li>型の別名</li>
+<li>変数</li>
+<li>非静的メンバ変数</li>
+<li>関数</li>
+<li>列挙型</li>
+<li>テンプレートの特殊化</li>
+</ul>
+<h3 id="maybe_unusedc17"><a href="https://cpprefjp.github.io/lang/cpp17/maybe_unused.html">maybe_unused属性(C++17)</a><a class="headerlink" href="#maybe_unusedc17" title="Permanent link">&para;</a></h3>
+<p>⇒警告抑制タイプの属性：意図して使ってない要素に対してコンパイラに文句を言わせない</p>
+<p>主に、各種宣言部分で色々使える</p>
+<pre><code class="language-cpp">class [[maybe_unused]] X;
+using integer [[maybe_unused]] = int;
+[[maybe_unused]] typedef int integer;
+[[maybe_unused]] void f();
+template &lt;class T&gt;
+[[maybe_unused]] inline void f();
+enum class [[maybe_unused]] E {
+  A [[maybe_unused]],
+  B
+};
+</code></pre>
+<p>関数の引数の場合、maybe_unusedを指定せずとも、引数名を定義しないことで警告を抑制できる。  </p>
+<pre><code class="language-cpp">void func1([[maybe_unused]]int unused_arg){}
+void func2(int){}
+</code></pre>
+<h3 id="nodiscardc17"><a href="https://cpprefjp.github.io/lang/cpp17/nodiscard.html">nodiscard属性(C++17)</a><a class="headerlink" href="#nodiscardc17" title="Permanent link">&para;</a></h3>
+<p>「関数の戻り値を破棄してはいけない」という情報をコンパイラに伝え、エラー処理など本来無視してはならない戻り値の意図しない無視をプログラマに警告として伝えるための属性である。</p>
+<p>関数に使用した場合、その返り値を無視すると警告を発するようになる。
+クラス、構造体、列挙型の宣言に対して指定した場合、その型の返り値を無視すると警告を発する。</p>
+<pre><code class="language-cpp">struct [[nodiscard]] error_info{};
+[[nodiscard]] int func(){return 0;}
+</code></pre>
+<p>C++20ではさらに以下の改良が加わっている。</p>
+<ul>
+<li><a href="https://cpprefjp.github.io/lang/cpp20/nodiscard_for_constructors.html">コンストラクタのオーバーロードごとに付加出来るように</a></li>
+<li><a href="https://cpprefjp.github.io/lang/cpp20/nodiscard_should_have_a_reason.html">警告の理由の文字列を付加できるように</a></li>
+</ul>
+<h3 id="fallthroughc17"><a href="https://cpprefjp.github.io/lang/cpp17/fallthrough.html">fallthrough属性(C++17)</a><a class="headerlink" href="#fallthroughc17" title="Permanent link">&para;</a></h3>
+<p>switch-case文においてcaseの次にbreak文を置かないことで連続の複数のcaseに渡ってプログラムが実行されること（fallthrough）は、
+しばしば悪用されるが、プログラマが見落としやすくバグにもつながりやすい。そのため、コンパイラはフォールスルーを検知すると警告を出す。
+この<code>[[fallthrough]]</code>属性はフォールスルーが意図的であることを伝えると同時に、プログラマにとってもフォールスルーを見つけやすくするものである。</p>
+<pre><code class="language-cpp">switch (N) {
+  case 1:
+    // do something
+    [[fallthrough]]
+  case 2:
+    break;
+  default:
+}
+</code></pre>
+<p>なお、最後のcaseやdefaultに記述するとコンパイルエラーとなる。</p>
+<h3 id="optionaland_then-c23"><a href="https://cpprefjp.github.io/reference/optional/optional/and_then.html">optional::and_then (C++23)</a><a class="headerlink" href="#optionaland_then-c23" title="Permanent link">&para;</a></h3>
+<p>無効値チェックだけのためのifがなくせそう</p>
+<pre><code class="language-c++">std::optional&lt;int&gt; opt;
+
+// before
+if(opt){
+    // do something
+}
+
+// after
+opt.and_then([](int val){
+    // do something
+})
+</code></pre>
+<p>↑は1つだけだが、以下のような処理が複雑化したり連続したりすると威力を発揮しそう。</p>
+<pre><code class="language-c++">// before
+if(opt){
+    if(opt.value != 2){
+        // do something
+    }
+}
+// after
+opt.and_then([](int val){
+    if(val ==2){
+        return null_opt;
+    }else{
+        return val;
+    }
+}).and_then([](int val){
+    // do something
+})
+</code></pre>
+<h3 id="c20_1"><a href="https://cpprefjp.github.io/lang/cpp20/designated_initialization.html">指示付き初期化(C++20)</a><a class="headerlink" href="#c20_1" title="Permanent link">&para;</a></h3>
+<pre><code class="language-c++">struct Point3D { int x; int y; int z = 0; };
+</code></pre>
+<p>に対して</p>
+<pre><code class="language-c++">Point3D p2 {.x = 1, .y = 2, .z = 3};
+</code></pre>
+<p>と言ったメンバ名を指定しての初期化が可能になる</p>
+<h4 id="_1">用語<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h4>
+<table>
+<thead>
+<tr>
+<th>単語</th>
+<th>説明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>指示子</td>
+<td><code>.x</code>とかのメンバ名を指定する書き方のこと</td>
+</tr>
+<tr>
+<td>指示付き初期化子</td>
+<td><code>.x = 1</code> や<code>.y{2}</code>などの指示子を使った初期化のこと</td>
+</tr>
+<tr>
+<td>指示付き初期化子リスト</td>
+<td><code>{.x = 1, .y = 2, .z = 3}</code> など指示付き初期化子が使われた初期化リストのこと</td>
+</tr>
+</tbody>
+</table>
+<h4 id="_2">注意<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h4>
+<ul>
+<li>指示付き初期化子の順番は定義した順番である必要がある<ul>
+<li>違う場合はコンパイルエラー</li>
+</ul>
+</li>
+<li>初期化子は直接ネストしてアクセスできない<ul>
+<li>構造体が入れ子になっている場合など<ul>
+<li>NG：{ .a.b = 1 }</li>
+<li>OK：{ .a{ .b = 1 } }</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h4 id="_3">名前付き引数のようなもの<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h4>
+<pre><code class="language-c++">struct Fuga{
+int a,b,c;
+}
+void hoge(Fuga fuga)
+hoge({.a = 1, .b=2, .c=3})
+</code></pre>
+<h3 id="invoke">INVOKE要件<a class="headerlink" href="#invoke" title="Permanent link">&para;</a></h3>
+<ul>
+<li>関数呼び出しを抽象化した、仮想操作”INVOKE”についての要件</li>
+<li>C++17からは <code>std::invoke</code>として実体化されている</li>
+</ul>
+<h4 id="_4">用語<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h4>
+<table>
+<thead>
+<tr>
+<th>用語</th>
+<th>雑な要約</th>
+<th>例</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>call-signature</td>
+<td>関数の宣言文の型情報だけ残したもの</td>
+<td>int (float, int)</td>
+</tr>
+<tr>
+<td>callable-type</td>
+<td>関数呼び出し演算子<code>()</code>を適用できる型</td>
+<td></td>
+</tr>
+<tr>
+<td>callable-object</td>
+<td>callable-type型のオブジェクト</td>
+<td></td>
+</tr>
+<tr>
+<td>call-wrapper-type</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>call-wrapper</td>
+<td>call-wrapper-type型のオブジェクト</td>
+<td></td>
+</tr>
+<tr>
+<td>target-object</td>
+<td>　callable-objectに保持されているオブジェクト</td>
+<td>ラムダ式でキャプチャする変数などが該当する？</td>
+</tr>
+</tbody>
+</table>
+<h3 id="stdinvokec17"><a href="https://cpprefjp.github.io/reference/functional/invoke.html">std::invoke(C++17)</a><a class="headerlink" href="#stdinvokec17" title="Permanent link">&para;</a></h3>
+<p>TBD</p>
+<h3 id="stdcopysignc11"><a href="https://cpprefjp.github.io/reference/cmath/copysign.html">std::copysign(C++11)</a><a class="headerlink" href="#stdcopysignc11" title="Permanent link">&para;</a></h3>
+<p>地味だけど結構うれしいやつ。
+今まで、3項演算子やif文を使って符号判定してプラスマイナス反転させていた処理を簡潔に書くことができる。</p>
+<pre><code class="language-c++">auto value = std::copysign(&lt;絶対値マン&gt;, &lt;符号マン&gt;)
+</code></pre>
+<h3 id="stdexchangec14"><a href="https://cpprefjp。github.io/reference/utility/exchange.html">std::exchange(C++14)</a><a class="headerlink" href="#stdexchangec14" title="Permanent link">&para;</a></h3>
+<p>値を書き換えて、書き換える前の値を返す。</p>
+<pre><code class="language-C++">auto &lt;古い値の格納変数&gt; = std::exchange(&lt;書き換え対象変数&gt;, &lt;新しい値&gt;)
+</code></pre>
+<p>後置インクリメント演算子みたいなイメージかも</p>
+<pre><code class="language-C++">int value = 0;
+std::cout &lt;&lt; value++ &lt;&lt; std::endl; // output: 0
+std::cout &lt;&lt; std::exchange(value, value+1) std::endl; // output: 1
+std::cout &lt;&lt; value &lt;&lt; std::endl; // output: 2
+</code></pre>
+<h3 id="stdswapc11"><a href="https://cpprefjp.github.io/reference/utility/swap.html">std::swap(C++11)</a><a class="headerlink" href="#stdswapc11" title="Permanent link">&para;</a></h3>
+<p>2つの値を入れ替えるswap動作を行う。配列に対しても使える。</p>
+<pre><code class="language-C++">int a,b;
+std::swap(a,b);
+</code></pre>
+<p>今まで以下のようにわざわざ一時変数を作って値を入れ替えていたのが1行でかける。</p>
+<pre><code class="language-C++">int a,b;
+int tmp = a;
+a = b;
+b = tmp;
+</code></pre>
+<p>少し脇道にそれるが<code>std::exchange</code>を知っていたらこちらでもかける</p>
+<pre><code class="language-C++">int a,b;
+a = std::exchange(b,a);
+</code></pre>
+<h3 id="stdpartitionc03"><a href="https://cpprefjp.github.io/reference/algorithm/partition.html">std::partition(C++03)</a><a class="headerlink" href="#stdpartitionc03" title="Permanent link">&para;</a></h3>
+<p>条件を表す関数オブジェクトを指定して、条件を満たす（関数がtrueを返す）要素をコンテナの前の方へ、条件を満たさないものを後ろに集める。</p>
+<pre><code class="language-C++">std::vector&lt;int&gt; v = {1,2,3,4,5};
+// 条件: 偶数
+auto pos = std::partition(v.begin(), v.end(), [](int x){ return x % 2 == 0; });
+// v: {4,2,3,1,5}, pos: 添字2に当たるイテレータ
+</code></pre>
+<h2 id="stdmismatchc03"><a href="https://cpprefjp.github.io/reference/algorithm/mismatch.html">std::mismatch(C++03)</a><a class="headerlink" href="#stdmismatchc03" title="Permanent link">&para;</a></h2>
+<p>与えられた2つの範囲のうち、最初に一致しない位置を検索する。</p>
+<pre><code class="language-C++">std::vector&lt;int&gt; a = {1,2,3,4,5};
+std::vector&lt;int&gt; b = {4,5,6,6,7};
+
+// mod3が一致しない最初の位置
+auto [a_pos, b_pos] = std::mismatch(a.begin(), a.end(), b.begin(), [](const int &amp; a, const int &amp; b){ return a%3 == b%3; });
+// a_pos: 位置3, 内容4のイテレータ
+// b_pos: 位置3, 内容6のイテレータ
+</code></pre>
+<ul>
+<li><code>==</code>演算子の代わりの関数オブジェクトを指定することもできる</li>
+<li>ミスマッチが見つからなかったときはこういう検索系関数のお決まり通り最後の要素を返す。</li>
+<li>2つ目の範囲の最後は省略可（a.size() &gt; b.size()のときは使っちゃダメ）</li>
+</ul>
+<h3 id="coming-soon">Coming Soon<a class="headerlink" href="#coming-soon" title="Permanent link">&para;</a></h3>
+<ul>
+<li><a href="https://cpprefjp.github.io/lang/cpp11/attributes.html">属性構文(C++11)</a></li>
+<li><a href="https://cpprefjp.github.io/lang/cpp17/fallthrough.html">fallthrough(c++17)</a></li>
+<li><a href="https://cpprefjp.github.io/lang/cpp20/language_support_for_empty_objects.html">no_unique_address(c++20)</a></li>
+<li><a href="https://cpprefjp.github.io/lang/cpp20/likely_and_unlikely_attributes.html">likely, unlikely (c++20)</a></li>
+<li><a href="https://cpprefjp.github.io/lang/cpp20/reserving_attribute_namespaces_for_future_use.html">属性の名前空間予約(c++20)</a></li>
+<li><a href="https://cpprefjp.github.io/lang/cpp17/non_standard_attributes.html">不明な属性を無視する(C++17)</a></li>
+<li><a href="https://cpprefjp.github.io/lang/cpp11/thread_local_storage.html">スレッドローカルストレージ(C++11)</a></li>
+<li><a href="https://cpprefjp.github.io/lang/cpp11/static_initialization_thread_safely.html">ブロックスコープを持つstatic変数初期化のスレッドセーフ化(C++11)</a></li>
+<li><a href="https://cpprefjp.github.io/lang/cpp11/extern_template.html">extern template(C++11)</a></li>
+<li><a href="https://cpprefjp.github.io/lang/cpp11/dependent_name_specifier_outside_of_templates.html">依存名に対するtypenameとtemplateの制限緩和(C++11)</a></li>
+<li><a href="https://cpprefjp.github.io/lang/cpp11/variadic_templates.html">可変引数テンプレート</a></li>
+<li><a href="https://cpprefjp.github.io/lang/cpp11/inheriting_constructors.html">継承コンストラクタ(C++11)</a></li>
+<li>mutex</li>
+<li>lock_gard</li>
+</ul>
+
+
+
+
+
+
+
+  
+    
+  
+  
+    
+  
+
+
+  <aside class="md-source-file">
+    
+      
+  <span class="md-source-file__fact">
+    <span class="md-icon" title="Last update">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
+    </span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_datetime" title="2025年11月29日 13:53:09 JST">2025-11-29 13:53:09</span>
+  </span>
+
+    
+    
+      
+  <span class="md-source-file__fact">
+    <span class="md-icon" title="Created">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M14.47 15.08 11 13V7h1.5v5.25l3.08 1.83c-.41.28-.79.62-1.11 1m-1.39 4.84c-.36.05-.71.08-1.08.08-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8c0 .37-.03.72-.08 1.08.69.1 1.33.32 1.92.64.1-.56.16-1.13.16-1.72 0-5.5-4.5-10-10-10S2 6.5 2 12s4.47 10 10 10c.59 0 1.16-.06 1.72-.16-.32-.59-.54-1.23-.64-1.92M18 15v3h-3v2h3v3h2v-3h3v-2h-3v-3z"/></svg>
+    </span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_datetime" title="2025年11月29日 13:53:09 JST">2025-11-29 13:53:09</span>
+  </span>
+
+    
+    
+    
+  </aside>
+
+
+  
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright &copy; 2022 HansRobo
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+        
+<div class="md-social">
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://twitter.com/Hans_Robo" target="_blank" rel="noopener" title="twitter.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M459.4 151.7c.3 4.5.3 9.1.3 13.6 0 138.7-105.6 298.6-298.6 298.6-59.5 0-114.7-17.2-161.1-47.1 8.4 1 16.6 1.3 25.3 1.3 49.1 0 94.2-16.6 130.3-44.8-46.1-1-84.8-31.2-98.1-72.8 6.5 1 13 1.6 19.8 1.6 9.4 0 18.8-1.3 27.6-3.6-48.1-9.7-84.1-52-84.1-103v-1.3c14 7.8 30.2 12.7 47.4 13.3-28.3-18.8-46.8-51-46.8-87.4 0-19.5 5.2-37.4 14.3-53C87.4 130.8 165 172.4 252.1 176.9c-1.6-7.8-2.6-15.9-2.6-24C249.5 95.1 296.3 48 354.4 48c30.2 0 57.5 12.7 76.7 33.1 23.7-4.5 46.5-13.3 66.6-25.3-7.8 24.4-24.4 44.8-46.1 57.8 21.1-2.3 41.6-8.1 60.4-16.2-14.3 20.8-32.2 39.3-52.6 54.3"/></svg>
+    </a>
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://github.com/HansRobo" target="_blank" rel="noopener" title="github.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": [], "search": "../assets/javascripts/workers/search.7a47a382.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.e71a0d61.min.js"></script>
+      
+    
+  </body>
+</html>
