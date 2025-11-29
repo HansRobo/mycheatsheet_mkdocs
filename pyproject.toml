@@ -12,7 +12,3 @@ dependencies = [
     "mdx_truly_sane_lists",
     "pyyaml",
 ]
-
-[build-system]
-requires = ["hatchling"]
-build-backend = "hatchling.build"
