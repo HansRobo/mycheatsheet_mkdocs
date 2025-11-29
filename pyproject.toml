@@ -1,22 +1,15 @@
 [tool.poetry]
 name = "mycheatsheet_mkdocs"
 version = "0.1.0"
-description = "MkDocs project with extensions"
+description = "Documentation site powered by Zensical"
 authors = ["Kotaro Yoshimoto <pythagora.yoshimoto@gmail.com>"]
+package-mode = false
 
 [tool.poetry.dependencies]
-python = "^3.8"
-mkdocs = "*"
-mkdocs-material = "*"
+python = "^3.10"
+zensical = "*"
 pymdown-extensions = "*"
-fontawesome_markdown = "*"
-markdown = "*"
-python-markdown-math = "*"
-plantuml-markdown = "*"
-mkdocs-codeinclude-plugin = "*"
-mkdocs-git-revision-date-localized-plugin = "*"
 mdx_truly_sane_lists = "*"
-neoteroi-mkdocs = "*"
 
 [build-system]
 requires = ["poetry-core"]
