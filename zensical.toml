@@ -54,6 +54,8 @@ smart_enable = "all"
 [project.markdown_extensions."pymdownx.highlight"]
 anchor_linenums = true
 
+[project.markdown_extensions."pymdownx.superfences"]
+
 [project.markdown_extensions."pymdownx.inlinehilite"]
 [project.markdown_extensions."pymdownx.keys"]
 
@@ -76,5 +78,3 @@ custom_checkbox = true
 # Third-party extensions
 [project.markdown_extensions.mdx_truly_sane_lists]
 nested_indent = 4
-
-[project.markdown_extensions."neoteroi.timeline"]
