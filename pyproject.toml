@@ -10,6 +10,7 @@ python = "^3.10"
 zensical = "*"
 pymdown-extensions = "*"
 mdx_truly_sane_lists = "*"
+pyyaml = "*"
 
 [build-system]
 requires = ["poetry-core"]
